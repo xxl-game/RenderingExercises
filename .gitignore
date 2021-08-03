@@ -61,3 +61,6 @@ crashlytics-build.properties
 # OdinPlugin
 Assets/Plugins/Sirenix/
 Assets/Plugins/Sirenix.meta
+
+#idea
+/.idea/

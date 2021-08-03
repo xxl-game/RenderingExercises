@@ -17,9 +17,7 @@ public class EffectWatcher : MonoBehaviour
         Only3D,
         Both,
     }
-
-    public RenderPipelineAsset renderPipelineAsset;
-
+    
     [EnumToggleButtons]
     [PropertyOrder(100)]
     [OnValueChanged("ChangePipeline")]
@@ -29,6 +27,12 @@ public class EffectWatcher : MonoBehaviour
     [PropertyOrder(100)]
     [OnValueChanged("ChangeCameraViewType")]
     public CameraViewType cameraViewType;
+
+    [PropertyOrder(100)]
+    [OnValueChanged("OnColorChanged")]
+    public Color backGroundColor;
+    
+    public RenderPipelineAsset renderPipelineAsset;
     
     public Camera camera2D;
     
@@ -73,6 +77,14 @@ public class EffectWatcher : MonoBehaviour
                 camera3D.rect = new Rect(.5f, 0f, .5f, 1f);
                 break;
         }
+    }
+
+    void OnColorChanged()
+    {
+        camera2D.clearFlags = CameraClearFlags.SolidColor;
+        camera2D.backgroundColor = backGroundColor;
+        camera3D.clearFlags = CameraClearFlags.SolidColor;
+        camera3D.backgroundColor = backGroundColor;
     }
 
     private void Reset()
