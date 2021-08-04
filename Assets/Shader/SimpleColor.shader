@@ -9,23 +9,25 @@ Shader "Custom/SimpleUnlitColor"
     
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
-        LOD 100
-
         Pass
         {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
 
-            float4 vert (float4 vertex : POSITION) : SV_POSITION
+            struct appdata
             {
-                return UnityObjectToClipPos(vertex);
+                float4 vertex : POSITION;
+            };
+
+            float4 vert (appdata i) : SV_POSITION
+            {
+                return UnityObjectToClipPos(i.vertex);
             }
 
             fixed4 _Color;
             
-            fixed4 frag () : SV_Target
+            float4 frag () : SV_Target
             {
                 return _Color;
             }
