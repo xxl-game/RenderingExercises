@@ -7,7 +7,7 @@ public class EffectWatcher : MonoBehaviour
 {
     public enum RenderPipelineType
     {
-        None,
+        Buildin,
         Urp
     }
 
@@ -42,7 +42,7 @@ public class EffectWatcher : MonoBehaviour
     {
         switch (renderPipelineType)
         {
-            case RenderPipelineType.None:
+            case RenderPipelineType.Buildin:
                 GraphicsSettings.renderPipelineAsset = null;
                 break;
             case RenderPipelineType.Urp:

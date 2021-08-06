@@ -7,6 +7,8 @@ public class NameByShader : MonoBehaviour
     [DisableInPrefabAssets]
     void ResetName()
     {
-        gameObject.name = GetComponent<Renderer>().sharedMaterial.shader.name;
+        var render = GetComponent<Renderer>();
+        var mat = render.sharedMaterial;
+        gameObject.name = mat.shader.name;
     }
 }
