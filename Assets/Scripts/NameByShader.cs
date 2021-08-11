@@ -9,6 +9,6 @@ public class NameByShader : MonoBehaviour
     {
         var render = GetComponent<Renderer>();
         var mat = render.sharedMaterial;
-        gameObject.name = mat.shader.name;
+        gameObject.name = $"{mat.name} ： {mat.shader.name}";
     }
 }
