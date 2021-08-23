@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8077693b38a977a489cab3092473954f, type: 3}
   m_Name: CustomRenderPipeline
   m_EditorClassIdentifier: 
-  isClearRenderTarget: 1
+  isClearRenderTarget: 0
   isClearDepth: 1
   isClearColor: 1
   backgroundColor: {r: 0.9716981, g: 0.14208792, b: 0.14208792, a: 0}

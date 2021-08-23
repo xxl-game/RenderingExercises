@@ -1,104 +1,93 @@
-﻿using System;
-using Sirenix.OdinInspector;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class EffectWatcher : MonoBehaviour
 {
-    public enum RenderPipelineType
-    {
-        Buildin,
-        Urp
-    }
-
-    public enum CameraViewType
-    {
-        Only2D,
-        Only3D,
-        Both,
-    }
-    
-    [EnumToggleButtons]
-    [PropertyOrder(100)]
-    [OnValueChanged("ChangePipeline")]
-    public RenderPipelineType renderPipelineType;
-
-    [EnumToggleButtons]
-    [PropertyOrder(100)]
-    [OnValueChanged("ChangeCameraViewType")]
-    public CameraViewType cameraViewType;
-
-    [PropertyOrder(100)]
-    [OnValueChanged("OnColorChanged")]
     public Color backGroundColor;
-    
-    public RenderPipelineAsset renderPipelineAsset;
-    
-    public Camera camera2D;
-    
-    public Camera camera3D;
-    
-    void ChangePipeline()
+
+    public RenderPipelineAsset[] pipelineAssets;
+
+    public Camera[] cameras;
+
+    void BeginPipelines(int index)
     {
-        switch (renderPipelineType)
+        GUILayout.BeginHorizontal();
+        var asset = pipelineAssets[index];
+        var color = GUI.backgroundColor;
+        if (GraphicsSettings.renderPipelineAsset == asset)
         {
-            case RenderPipelineType.Buildin:
-                GraphicsSettings.renderPipelineAsset = null;
-                break;
-            case RenderPipelineType.Urp:
-                GraphicsSettings.renderPipelineAsset = renderPipelineAsset;
-                break;
+            GUI.backgroundColor = Color.yellow;
         }
+
+        if (GUILayout.Button("√", GUILayout.Width(40f)))
+        {
+            GraphicsSettings.renderPipelineAsset = asset;
+        }
+
+        GUI.backgroundColor = color;
     }
 
-    void ChangeCameraViewType()
+    void EndPipelines(int index)
     {
-        if (null == camera2D || null == camera3D)
+        GUILayout.EndHorizontal();
+    }
+
+    void BeginCameras(int index)
+    {
+        GUILayout.BeginHorizontal();
+        var cam = cameras[index];
+        var color = GUI.backgroundColor;
+        if (cam.gameObject.activeSelf)
         {
-            return;
+            GUI.backgroundColor = Color.yellow;
         }
-        
-        switch (cameraViewType)
+
+        if (GUILayout.Button("√", GUILayout.Width(40)))
         {
-            case CameraViewType.Only2D:
-                camera2D.gameObject.SetActive(true);
-                camera3D.gameObject.SetActive(false);
-                camera2D.rect = new Rect(0f, 0f, 1f, 1f);
-                break;
-            case CameraViewType.Only3D:
-                camera2D.gameObject.SetActive(false);
-                camera3D.gameObject.SetActive(true);
-                camera3D.rect = new Rect(0f, 0f, 1f, 1f);
-                break;
-            case CameraViewType.Both:
-                camera2D.gameObject.SetActive(true);
-                camera3D.gameObject.SetActive(true);
-                camera2D.rect = new Rect(0f, 0f, .5f, 1f);
-                camera3D.rect = new Rect(.5f, 0f, .5f, 1f);
-                break;
+            cam.gameObject.SetActive(!cam.gameObject.activeSelf);
+            var activeCams = cameras.Where(c => c.gameObject.activeSelf).ToArray();
+            var width = 1f / activeCams.Length;
+            for (var i = 0; i < activeCams.Length; i++)
+            {
+                var iCam = activeCams[i];
+                iCam.rect = new Rect(width * i, 0f, width, 1f);
+            }
         }
+
+        GUI.backgroundColor = color;
+    }
+
+    void EndCameras(int index)
+    {
+        GUILayout.EndHorizontal();
     }
 
     void OnColorChanged()
     {
-        camera2D.clearFlags = CameraClearFlags.SolidColor;
-        camera2D.backgroundColor = backGroundColor;
-        camera3D.clearFlags = CameraClearFlags.SolidColor;
-        camera3D.backgroundColor = backGroundColor;
+        for (var i = 0; i < cameras.Length; i++)
+        {
+            var cam = cameras[i];
+            cam.clearFlags = CameraClearFlags.SolidColor;
+            cam.backgroundColor = backGroundColor;
+        }
     }
 
     private void Reset()
     {
         gameObject.name = nameof(EffectWatcher);
+        cameras = new Camera[2];
+
         var transform2D = GameObject.Find("Camera2D");
         if (null != transform2D)
         {
-            camera2D = transform2D.GetComponent<Camera>();
+            cameras[1] = transform2D.GetComponent<Camera>();
         }
+
         var transform3D = GameObject.Find("Camera3D");
         if (null != transform3D)
         {
-            camera2D = transform3D.GetComponent<Camera>();
+            cameras[2] = transform3D.GetComponent<Camera>();
         }
     }
 }
