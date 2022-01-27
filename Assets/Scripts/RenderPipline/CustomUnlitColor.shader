@@ -4,6 +4,12 @@
 
 Shader "CustomPipeline/SimpleUnlitColor"
 {
+    Properties 
+    {
+        _Color("Color", color) = (1, 1, 1, 1)
+        _BaseMap("Base Map", 2D) = "white"
+    }
+    
     SubShader
     {
         Pass
@@ -18,30 +24,39 @@ Shader "CustomPipeline/SimpleUnlitColor"
             #pragma vertex vert
             #pragma fragment frag
 
-            float4x4 unity_MatrixVP;
-            float4x4 unity_ObjectToWorld;
-
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            
             struct Attributes
             {
                 float4 positionOS : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             struct Varyings
             {
                 float4 positionCS : SV_POSITION;
+                float2 uv : TEXCOORD0;
             };
 
+            float4 _Color;
+
+            Texture2D(_BaseMap);
+            sampler(sampler_BaseMap);
+            
+            
             Varyings vert(Attributes IN)
             {
                 Varyings OUT;
                 float4 worldPos = mul(unity_ObjectToWorld, IN.positionOS);
                 OUT.positionCS = mul(unity_MatrixVP, worldPos);
+
+                OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
                 return OUT;
             }
 
             float4 frag(Varyings IN) : SV_TARGET
             {
-                return float4(0.5, 1, 0.5, 1);
+                return _Color;
             }
             ENDHLSL
         }

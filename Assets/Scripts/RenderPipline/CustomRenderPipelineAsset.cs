@@ -1,7 +1,6 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
 
 [CreateAssetMenu(menuName = "Rendering/CustomRenderPipelineAsset")]
 public class CustomRenderPipelineAsset : RenderPipelineAsset
@@ -21,9 +20,13 @@ public class CustomRenderPipelineAsset : RenderPipelineAsset
     [BoxGroup("ClearRenderTarget")]
     public float depth = 1f;
 
-    [BoxGroup("Culling")][ToggleLeft]
-    public bool isCulling;
 
+    [LabelText("是否绘制天空盒")]
+    public bool isDrawSkybox;
+
+    [Delayed]
+    public string[] shaderTagIds;
+    
     /// <summary>
     /// 第一次渲染之前会调用这个函数。
     /// 每当这个资产设置更改时，也会销毁之前的管线资产并重新调用这个函数来创建新的资产。
@@ -31,6 +34,8 @@ public class CustomRenderPipelineAsset : RenderPipelineAsset
     /// <returns></returns>
     protected override RenderPipeline CreatePipeline()
     {
+        Debug.Log($"#Asset#Create");
+        Application.targetFrameRate = 10;
         return new CustomRenderPipeline(this);
     }
 
@@ -41,6 +46,5 @@ public class CustomRenderPipelineAsset : RenderPipelineAsset
         isClearColor = true;
         backgroundColor = Color.black;
         depth = 1f;
-        isCulling = true;
     }
 }

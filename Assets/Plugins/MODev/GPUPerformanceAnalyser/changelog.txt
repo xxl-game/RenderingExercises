@@ -1,0 +1,16 @@
+Version 1.01
+-documentation update
+
+Version 1.02
+-added value picker
+
+Version 1.03
+-window improvements
+
+Version 1.05
+-Scene performance scanner
+
+Version 1.08
+-Dropped support for Unity 2017.x
+-Added support for Unity 2020.x and 2021.x
+-Minor changes
