@@ -4,6 +4,9 @@ using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// 自定义的渲染管线。
+/// </summary>
 public class CustomRenderPipeline : RenderPipeline
 {
     private CustomRenderPipelineAsset asset;

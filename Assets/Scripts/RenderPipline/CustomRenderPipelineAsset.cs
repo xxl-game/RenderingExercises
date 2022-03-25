@@ -2,6 +2,9 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// 自定义的渲染管线资产。
+/// </summary>
 [CreateAssetMenu(menuName = "Rendering/CustomRenderPipelineAsset")]
 public class CustomRenderPipelineAsset : RenderPipelineAsset
 {

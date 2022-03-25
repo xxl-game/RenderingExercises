@@ -14,13 +14,12 @@ namespace Editor
             switch (member.Name)
             {
                 case "prefab":
-                    attributes.Add(new ShowIfAttribute("$enable"));
                     attributes.Add(new HideLabelAttribute());
                     attributes.Add(new AssetsOnlyAttribute());
                     break;
                 case "lines":
-                    attributes.Add(new LabelTextAttribute(" "));
-                    attributes.Add(new PropertyOrderAttribute(-100));
+                    attributes.Add(new LabelTextAttribute("lines"));
+                    attributes.Add(new PropertyOrderAttribute(100));
                     attributes.Add(new ListDrawerSettingsAttribute());
                     break;
                 case "prefabRoot":
@@ -47,12 +46,17 @@ namespace Editor
                     attributes.Add(new BoxGroupAttribute("Root"));
                     attributes.Add(new OnValueChangedAttribute("OnRootEulerChanged"));
                     break;
-                case "ToggleEnable":
-                    attributes.Add(new PropertyOrderAttribute(-200));
-                    attributes.Add(new ButtonAttribute());
-                    break;
                 case "ReCreate":
-                    attributes.Add(new ButtonAttribute(ButtonSizes.Medium));
+                    attributes.Add(new HorizontalGroupAttribute());
+                    attributes.Add(new ButtonAttribute("重新生成"));
+                    break;
+                case "ClearAllGeneratedGameObjects":
+                    attributes.Add(new HorizontalGroupAttribute());
+                    attributes.Add(new ButtonAttribute("清空"));
+                    break;
+                case "GetFromSelection":
+                    attributes.Add(new HorizontalGroupAttribute());
+                    attributes.Add(new ButtonAttribute("获取选中材质"));
                     break;
             }
         }

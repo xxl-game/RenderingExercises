@@ -2,6 +2,9 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// 切换渲染管线和相机
+/// </summary>
 public class EffectWatcher : MonoBehaviour
 {
     public Color backGroundColor;

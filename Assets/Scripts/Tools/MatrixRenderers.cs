@@ -4,8 +4,6 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
-using UnityEngine.Rendering;
 
 public class MatrixRenderers : MonoBehaviour
 {
@@ -32,15 +30,11 @@ public class MatrixRenderers : MonoBehaviour
     public class Line
     {
         [HideLabel]
-        [EnableIf("enable")]
+        [DisplayAsString]
         public string name;
 
-        [HideInInspector]
-        public bool enable;
-        
         [LabelText(" ")]
-        [EnableIf("enable")]
-        [ListDrawerSettings(Expanded = true, AlwaysAddDefaultValue = true)]
+        [ListDrawerSettings(Expanded = true, IsReadOnly = true)]
         public List<MaterialDrawer> materialDrawers;
 
         public bool IsEmpty()
@@ -65,24 +59,34 @@ public class MatrixRenderers : MonoBehaviour
 
     public GameObject prefab;
 
+    /// <summary>
+    /// 生成预制体的容器。
+    /// </summary>
     public Transform prefabRoot;
-    
+
     public Line[] lines;
 
-    private bool enable;
-
+    /// <summary>
+    /// 排列预制体的角度
+    /// </summary>
     public Vector3 euler;
-    
+
+    /// <summary>
+    /// 排列预制体的间隔
+    /// </summary>
     public Vector3 interval1;
-    
+
     public Vector3 interval2;
 
     public Vector2 rootPos;
 
     public Vector3 rootEuler;
-    
+
     public float rootScale;
 
+    /// <summary>
+    /// 存储生成过的预制体。
+    /// </summary>
     [HideInInspector]
     public List<Transform> renderObjects;
 
@@ -94,10 +98,11 @@ public class MatrixRenderers : MonoBehaviour
             {
                 renderObjects = new List<Transform>();
             }
+
             return renderObjects;
         }
     }
-    
+
     void OnScaleChanged()
     {
         transform.localScale = new Vector3(rootScale, rootScale, rootScale);
@@ -124,26 +129,18 @@ public class MatrixRenderers : MonoBehaviour
 
     void OnIntervalChanged()
     {
-        
-    }
 
-    public void ToggleEnable()
+    }
+    
+    void ClearAllGeneratedGameObjects()
     {
-        enable = !enable;
-        if (null != lines)
-        {
-            foreach (var line in lines)
-            {
-                line.enable = enable;
-            }
-        }
+        RenderObjects.Clear();
+        DestroyChildren(prefabRoot);
     }
 
     void ReCreate()
     {
-        RenderObjects.Clear();
-        ClearChildren(prefabRoot);
-
+        ClearAllGeneratedGameObjects();
         if (null == prefab || null == lines || null == prefabRoot)
         {
             return;
@@ -171,12 +168,10 @@ public class MatrixRenderers : MonoBehaviour
             }
         }
     }
-
-    [Button("GetByShader")]
+    
     void GetFromSelection()
     {
-        RenderObjects.Clear();
-        ClearChildren(prefabRoot);
+        ClearAllGeneratedGameObjects();
         var materials = Selection.GetFiltered<Material>(SelectionMode.Assets | SelectionMode.DeepAssets).OrderBy(mat=>mat.name);
         var matGroups = materials.GroupBy(mat => mat.shader.name).ToList();
         lines = new Line[matGroups.Count];
@@ -185,7 +180,6 @@ public class MatrixRenderers : MonoBehaviour
             var matGroup = matGroups[i];
             var line = new Line();
             lines[i] = line;
-            line.enable = true;
             line.name = matGroup.Key;
             line.materialDrawers = new List<MaterialDrawer>();
             foreach (var material in matGroup)
@@ -199,7 +193,11 @@ public class MatrixRenderers : MonoBehaviour
         }
     }
 
-    public void ClearChildren(Transform t)
+    /// <summary>
+    /// 删除物体的子物体。
+    /// </summary>
+    /// <param name="t"></param>
+    public void DestroyChildren(Transform t)
     {
         if (null == t)
         {
