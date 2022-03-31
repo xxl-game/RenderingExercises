@@ -12,22 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8077693b38a977a489cab3092473954f, type: 3}
   m_Name: CustomRenderPipeline
   m_EditorClassIdentifier: 
-  isClearRenderTarget: 0
-  isClearDepth: 0
+  isClearRenderTarget: 1
+  isClearDepth: 1
   isClearColor: 1
-  backgroundColor: {r: 0.1981132, g: 0.062611245, b: 0.14387617, a: 0}
+  backgroundColor: {r: 0.09656459, g: 0.37424353, b: 0.5849056, a: 1}
   depth: 1
-  isDrawSkybox: 0
+  isDrawSkybox: 1
   shaderTagIds:
-  - CustomLight
-  - UniversalPipeline
-  - Always
   - ForwardBase
-  - PrepassBase
-  - Vertex
-  - VertexLMRGBM
-  - VertexLM
-  - UniversalForward
-  - NormalsRendering
-  - Universal2D
-  - 
+  - CustomLightMode
+  isDrawPostImageGizmo: 1
