@@ -1,0 +1,6393 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 1
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &166797859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166797861}
+  - component: {fileID: 166797860}
+  m_Layer: 0
+  m_Name: EffectWatcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &166797860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166797859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778896a092deef442869447eb709541a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backGroundColor: {r: 0.1462264, g: 0.62819535, b: 1, a: 1}
+  pipelineAssets:
+  - {fileID: 11400000, guid: aa1e4708fc54c02458cc7c060d68edda, type: 2}
+  - {fileID: 11400000, guid: 2225dd236c6207849b0c7d2c3b4b3d1c, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: e917387991e635d428f612a527058661, type: 2}
+  cameras:
+  - {fileID: 460699007}
+  shaderInfos:
+  - name: Examples/SimpleUnlitColor
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/CustomPipeline/ExampleSimpleUnlitColor.shader
+    propertyInfos: []
+  - name: AppsTools/FastShader/Effect/Blend_TwoSidesCopy
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/EffectShader/Effect_Blend_TwoSides_Copy.shader
+    propertyInfos:
+    - t: 0
+      name: _FrontFacesColor
+      des: Front Faces Color
+    - t: 0
+      name: _BackFacesColor
+      des: Back Faces Color
+    - t: 0
+      name: _FresnelColor
+      des: Fresnel Color
+    - t: 1
+      name: _SpeedMainTexUVNoiseZW
+      des: Speed MainTex U/V + Noise Z/W
+    - t: 2
+      name: _Cutoff
+      des: Mask Clip Value
+    - t: 2
+      name: _Emission
+      des: Emission
+    - t: 2
+      name: _UseFresnel
+      des: Use Fresnel?
+    - t: 2
+      name: _SeparateFresnel
+      des: SeparateFresnel
+    - t: 2
+      name: _SeparateEmission
+      des: Separate Emission
+    - t: 2
+      name: _Fresnel
+      des: Fresnel
+    - t: 2
+      name: _FresnelEmission
+      des: Fresnel Emission
+    - t: 2
+      name: _UseCustomData
+      des: Use Custom Data?
+    - t: 2
+      name: __dirty
+      des: 
+    - t: 4
+      name: _MainTex
+      des: Main Tex
+    - t: 4
+      name: _Mask
+      des: Mask
+    - t: 4
+      name: _Noise
+      des: Noise
+    - t: 4
+      name: _texcoord
+      des: 
+    - t: 4
+      name: _tex4coord
+      des: 
+  - name: Custom/StandardSurfaceShader
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/EffectShader/StandardSurfaceShader.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 3
+      name: _Glossiness
+      des: Smoothness
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 4
+      name: _MainTex
+      des: Albedo (RGB)
+  - name: Custom/SimpleUnlitColor
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/SimpleUnlitColor.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: MainColor
+  - name: Custom/SimpleUnlitTexture
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/SimpleUnlitTexture.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Custom/SkyReflection
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/SkyReflection.shader
+    propertyInfos: []
+  - name: Custom/UI
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/UI/CustomUI.shader
+    propertyInfos:
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+  - name: URPCustom/UrpEffectBlendTwoSides
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/URP/UrpEffectBlendTwoSides.shader
+    propertyInfos:
+    - t: 0
+      name: _FrontFacesColor
+      des: Front Faces Color
+    - t: 0
+      name: _BackFacesColor
+      des: Back Faces Color
+    - t: 0
+      name: _FresnelColor
+      des: Fresnel Color
+    - t: 1
+      name: _SpeedMainTexUVNoiseZW
+      des: Speed MainTex U/V + Noise Z/W
+    - t: 2
+      name: _Cutoff
+      des: Mask Clip Value
+    - t: 2
+      name: _Emission
+      des: Emission
+    - t: 2
+      name: _UseFresnel
+      des: Use Fresnel?
+    - t: 2
+      name: _SeparateFresnel
+      des: SeparateFresnel
+    - t: 2
+      name: _SeparateEmission
+      des: Separate Emission
+    - t: 2
+      name: _Fresnel
+      des: Fresnel
+    - t: 2
+      name: _FresnelEmission
+      des: Fresnel Emission
+    - t: 2
+      name: _UseCustomData
+      des: Use Custom Data?
+    - t: 2
+      name: __dirty
+      des: 
+    - t: 4
+      name: _MainTex
+      des: Main Tex
+    - t: 4
+      name: _Mask
+      des: Mask
+    - t: 4
+      name: _Noise
+      des: Noise
+    - t: 4
+      name: _texcoord
+      des: 
+    - t: 4
+      name: _tex4coord
+      des: 
+  - name: URPCustom/UrpSimpleUnlitColor
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/URP/UrpSimpleUnlitColor.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Base Color
+  - name: Custom/WorldSpaceNormals
+    supported: 1
+    hasError: 0
+    path: Assets/Art/Shader/WorldSpaceNormals.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/PolygonCountOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/PolygonCountOverlay.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/TransparencyOverdrawOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/TransparencyOverdrawOverlay.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/TransparencyTexturedOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/TransparencyTexturedOverlay.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/TransparencyWastedOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/TransparencyWastedOverlay.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/VisiblePolygonCountOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/VisiblePolygonCountOverlay.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/WastedPolygonsCountOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/WastedPolygonsCountOverlay.shader
+    propertyInfos: []
+  - name: Hidden/MODev/GpuPA/WastedPolygonsTexturedOverlay
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/MODev/GPUPerformanceAnalyser/Shaders/WastedPolygonsTexturedOverlay.shader
+    propertyInfos: []
+  - name: Debug View/Overdraw
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/Overdraw.shader
+    propertyInfos:
+    - t: 0
+      name: _OverdrawColor
+      des: Overdraw Color
+  - name: Debug View/Shaded Wireframe
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/ShadedWireframe.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 3
+      name: _Smoothing
+      des: Smoothing
+    - t: 3
+      name: _Thickness
+      des: Thickness
+    - t: 3
+      name: _Alpha
+      des: Alpha
+  - name: Unlit/ShadowCascades
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/ShadowCascades.shader
+    propertyInfos:
+    - t: 0
+      name: _ColorCascade0
+      des: Color cascade 0
+    - t: 0
+      name: _ColorCascade1
+      des: Color cascade 1
+    - t: 0
+      name: _ColorCascade2
+      des: Color cascade 2
+    - t: 0
+      name: _ColorCascade3
+      des: Color cascade 3
+  - name: Debug View/UV0 Checker
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/UV0Checker.shader
+    propertyInfos:
+    - t: 4
+      name: _Checker
+      des: Checker
+  - name: Debug View/UV1 Checker
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/UV1Checker.shader
+    propertyInfos:
+    - t: 4
+      name: _Checker
+      des: Checker
+  - name: Debug View/Vertex Color A
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/VertexColorA.shader
+    propertyInfos: []
+  - name: Debug View/Vertex Color B
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/VertexColorB.shader
+    propertyInfos: []
+  - name: Debug View/Vertex Color G
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/VertexColorG.shader
+    propertyInfos: []
+  - name: Debug View/Vertex Color R
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/VertexColorR.shader
+    propertyInfos: []
+  - name: Debug View/VertexColor RGB
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/VertexColorRGB.shader
+    propertyInfos: []
+  - name: Debug View/World Normals
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/WorldNormals.shader
+    propertyInfos: []
+  - name: Debug View/World Tangents
+    supported: 1
+    hasError: 0
+    path: Assets/Plugins/URPDebugViews/Shader/WorldTangents.shader
+    propertyInfos: []
+  - name: CustomPipeline/SimpleUnlitColor
+    supported: 1
+    hasError: 1
+    path: Assets/Scripts/RenderPipline/CustomUnlitColor.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 4
+      name: _BaseMap
+      des: Base Map
+  - name: ShaderControl/ChromaScreen
+    supported: 1
+    hasError: 0
+    path: Assets/ShaderControl/Demo/Resources/ChromaScreen.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/UnlitTransparentColored
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.core/Editor/Gizmo/UnlitGizmo.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+  - name: Hidden/LookDev/Compositor
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Compositor.shader
+    propertyInfos:
+    - t: 0
+      name: _ShadowColor0
+      des: Shadow Color for first view
+    - t: 0
+      name: _ShadowColor1
+      des: Shadow Color for second view
+    - t: 0
+      name: _FirstViewColor
+      des: Gizmo Color for first view
+    - t: 0
+      name: _SecondViewColor
+      des: Gizmo Color for second view
+    - t: 1
+      name: _CompositingParams
+      des: Blend Factor, exposure for first and second view, and current selected
+        side
+    - t: 1
+      name: _CompositingParams2
+      des: Drag and drop zone and shadow multipliers
+    - t: 1
+      name: _GizmoPosition
+      des: Position of split view gizmo
+    - t: 1
+      name: _GizmoZoneCenter
+      des: Center of Zone view gizmo
+    - t: 1
+      name: _GizmoSplitPlane
+      des: 2D plane of the gizmo
+    - t: 1
+      name: _GizmoSplitPlaneOrtho
+      des: 2D plane orthogonal to the gizmo
+    - t: 1
+      name: _GizmoThickness
+      des: Gizmo Thickness
+    - t: 1
+      name: _GizmoCircleRadius
+      des: Gizmo extremities radius
+    - t: 1
+      name: _ScreenRatio
+      des: Screen ratio
+    - t: 1
+      name: _ToneMapCoeffs1
+      des: Parameters for neutral tonemap
+    - t: 1
+      name: _ToneMapCoeffs2
+      des: Parameters for neutral tonemap
+    - t: 2
+      name: _GizmoLength
+      des: Gizmo Length
+    - t: 2
+      name: _GizmoRenderMode
+      des: Render gizmo mode
+    - t: 2
+      name: _GetBlendFactorMaxGizmoDistance
+      des: Distance on the gizmo where the blend circle stops
+    - t: 2
+      name: _BlendFactorCircleRadius
+      des: Visual radius of the blend factor gizmo
+    - t: 4
+      name: _Tex0MainView
+      des: Main View
+    - t: 4
+      name: _Tex0Shadows
+      des: First View shadow mask
+    - t: 4
+      name: _Tex1MainView
+      des: Second View
+    - t: 4
+      name: _Tex1Shadows
+      des: Second View shadow mask
+  - name: Hidden/LookDev/CubeToLatlong
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.core/Editor/LookDev/CubeToLatlong.shader
+    propertyInfos:
+    - t: 1
+      name: _CubeToLatLongParams
+      des: Parameters
+    - t: 1
+      name: _WindowParams
+      des: Window params
+    - t: 4
+      name: _MainTex
+      des: Cubemap
+  - name: Hidden/Universal Render Pipeline/Editor/CurveBackground
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/CurveBackground.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/Editor/Shadows Midtones Highlights Curve
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/ShadowsMidtonesHighlightsCurves.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/Editor/Trackball
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/TrackballEditor.shader
+    propertyInfos: []
+  - name: Shader Graphs/ArnoldStandardSurface
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ArnoldStandardSurface/ArnoldStandardSurface.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _BASE_COLOR
+      des: BaseColor
+    - t: 0
+      name: _SPECULAR_COLOR
+      des: SpecularColor
+    - t: 0
+      name: _EMISSION_COLOR
+      des: EmissionColor
+    - t: 2
+      name: _METALNESS
+      des: Metalness
+    - t: 2
+      name: _SPECULAR_ROUGHNESS
+      des: SpecularRoughness
+    - t: 2
+      name: _SPECULAR_IOR
+      des: SpecularIOR
+    - t: 4
+      name: _BASE_COLOR_MAP
+      des: BaseColorMap
+    - t: 4
+      name: _METALNESS_MAP
+      des: MetalnessMap
+    - t: 4
+      name: _SPECULAR_COLOR_MAP
+      des: SpecularColorMap
+    - t: 4
+      name: _SPECULAR_ROUGHNESS_MAP
+      des: SpecularRoughnessMap
+    - t: 4
+      name: _SPECULAR_IOR_MAP
+      des: SpecularIORMap
+    - t: 4
+      name: _EMISSION_COLOR_MAP
+      des: EmissionColorMap
+    - t: 4
+      name: _NORMAL_MAP
+      des: NormalMap
+  - name: Shader Graphs/ArnoldStandardSurfaceTransparent
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ArnoldStandardSurface/ArnoldStandardSurfaceTransparent.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _BASE_COLOR
+      des: BaseColor
+    - t: 0
+      name: _SPECULAR_COLOR
+      des: SpecularColor
+    - t: 0
+      name: _EMISSION_COLOR
+      des: EmissionColor
+    - t: 2
+      name: _METALNESS
+      des: Metalness
+    - t: 2
+      name: _SPECULAR_ROUGHNESS
+      des: SpecularRoughness
+    - t: 2
+      name: _SPECULAR_IOR
+      des: SpecularIOR
+    - t: 3
+      name: _OPACITY
+      des: Opacity
+    - t: 4
+      name: _BASE_COLOR_MAP
+      des: BaseColorMap
+    - t: 4
+      name: _METALNESS_MAP
+      des: MetalnessMap
+    - t: 4
+      name: _SPECULAR_COLOR_MAP
+      des: SpecularColorMap
+    - t: 4
+      name: _SPECULAR_ROUGHNESS_MAP
+      des: SpecularRoughnessMap
+    - t: 4
+      name: _SPECULAR_IOR_MAP
+      des: SpecularIORMap
+    - t: 4
+      name: _EMISSION_COLOR_MAP
+      des: EmissionColorMap
+    - t: 4
+      name: _NORMAL_MAP
+      des: NormalMap
+    - t: 4
+      name: _OPACITY_MAP
+      des: OpacityMap
+  - name: Shader Graphs/PhysicalMaterial3DsMax
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/PhysicalMaterial3DsMax/PhysicalMaterial3DsMax.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _BASE_COLOR
+      des: BaseColor
+    - t: 0
+      name: _REFLECTIONS_COLOR
+      des: ReflectionsColor
+    - t: 0
+      name: _EMISSION_COLOR
+      des: Emission
+    - t: 2
+      name: _REFLECTIONS_WEIGHT
+      des: ReflectionsWeight
+    - t: 3
+      name: _BASE_COLOR_WEIGHT
+      des: BaseColorWeight
+    - t: 3
+      name: _REFLECTIONS_ROUGHNESS
+      des: ReflectionsRoughness
+    - t: 3
+      name: _METALNESS
+      des: Metalness
+    - t: 3
+      name: _REFLECTIONS_IOR
+      des: ReflectionsIOR
+    - t: 3
+      name: _TRANSPARENCY
+      des: Transparency
+    - t: 3
+      name: _EMISSION_WEIGHT
+      des: EmissionWeight
+    - t: 3
+      name: _BUMP_MAP_STRENGTH
+      des: BumpMapStrength
+    - t: 4
+      name: _BASE_COLOR_MAP
+      des: BaseColorMap
+    - t: 4
+      name: _REFLECTIONS_COLOR_MAP
+      des: ReflectionsColorMap
+    - t: 4
+      name: _REFLECTIONS_ROUGHNESS_MAP
+      des: ReflectionsRoughnessMap
+    - t: 4
+      name: _METALNESS_MAP
+      des: MetalnessMap
+    - t: 4
+      name: _REFLECTIONS_IOR_MAP
+      des: ReflectionsIORMap
+    - t: 4
+      name: _TRANSPARENCY_MAP
+      des: TransparencyMap
+    - t: 4
+      name: _EMISSION_COLOR_MAP
+      des: EmissionMap
+    - t: 4
+      name: _BUMP_MAP
+      des: BumpMap
+  - name: Shader Graphs/PhysicalMaterial3DsMaxTransparent
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/PhysicalMaterial3DsMax/PhysicalMaterial3DsMaxTransparent.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _BASE_COLOR
+      des: BaseColor
+    - t: 0
+      name: _REFLECTIONS_COLOR
+      des: ReflectionsColor
+    - t: 0
+      name: _EMISSION_COLOR
+      des: Emission
+    - t: 2
+      name: _REFLECTIONS_WEIGHT
+      des: ReflectionsWeight
+    - t: 3
+      name: _BASE_COLOR_WEIGHT
+      des: BaseColorWeight
+    - t: 3
+      name: _REFLECTIONS_ROUGHNESS
+      des: ReflectionsRoughness
+    - t: 3
+      name: _METALNESS
+      des: Metalness
+    - t: 3
+      name: _REFLECTIONS_IOR
+      des: ReflectionsIOR
+    - t: 3
+      name: _TRANSPARENCY
+      des: Transparency
+    - t: 3
+      name: _EMISSION_WEIGHT
+      des: EmissionWeight
+    - t: 3
+      name: _BUMP_MAP_STRENGTH
+      des: BumpMapStrength
+    - t: 4
+      name: _BASE_COLOR_MAP
+      des: BaseColorMap
+    - t: 4
+      name: _REFLECTIONS_COLOR_MAP
+      des: ReflectionsColorMap
+    - t: 4
+      name: _REFLECTIONS_ROUGHNESS_MAP
+      des: ReflectionsRoughnessMap
+    - t: 4
+      name: _METALNESS_MAP
+      des: MetalnessMap
+    - t: 4
+      name: _REFLECTIONS_IOR_MAP
+      des: ReflectionsIORMap
+    - t: 4
+      name: _TRANSPARENCY_MAP
+      des: TransparencyMap
+    - t: 4
+      name: _EMISSION_COLOR_MAP
+      des: EmissionMap
+    - t: 4
+      name: _BUMP_MAP
+      des: BumpMap
+  - name: Hidden/Light2D-Point
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Point.shader
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+  - name: Hidden/Light2d-Point-Volumetric
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Point-Volumetric.shader
+    propertyInfos: []
+  - name: Hidden/Light2D-Shape
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Shape.shader
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+  - name: Hidden/Light2D-Shape-Volumetric
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Shape-Volumetric.shader
+    propertyInfos: []
+  - name: Hidden/Shadow2DRemoveSelf
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2DRemoveSelf.shader
+    propertyInfos:
+    - t: 2
+      name: _ShadowStencilGroup
+      des: __ShadowStencilGroup
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/ShadowGroup2D
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/ShadowGroup2D.shader
+    propertyInfos:
+    - t: 2
+      name: _ShadowStencilGroup
+      des: __ShadowStencilGroup
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Universal Render Pipeline/2D/Sprite-Lit-Default
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Lit-Default.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 0
+      name: _RendererColor
+      des: RendererColor
+    - t: 1
+      name: _Flip
+      des: Flip
+    - t: 2
+      name: _EnableExternalAlpha
+      des: Enable External Alpha
+    - t: 4
+      name: _MainTex
+      des: Diffuse
+    - t: 4
+      name: _MaskTex
+      des: Mask
+    - t: 4
+      name: _NormalMap
+      des: Normal Map
+    - t: 4
+      name: _AlphaTex
+      des: External Alpha
+  - name: Universal Render Pipeline/Autodesk Interactive/Autodesk Interactive Masked
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Autodesk Interactive/Autodesk
+      Interactive Masked.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: BaseColor
+    - t: 0
+      name: _EmissionColor
+      des: Emissive
+    - t: 1
+      name: _UvOffset
+      des: UVOffset
+    - t: 1
+      name: _UvTiling
+      des: UVScale
+    - t: 2
+      name: _UseColorMap
+      des: UseColorMap
+    - t: 2
+      name: _UseNormalMap
+      des: UseNormalMap
+    - t: 2
+      name: _UseMetallicMap
+      des: UseMetallicMap
+    - t: 2
+      name: _Metallic
+      des: Metallic
+    - t: 2
+      name: _UseRoughnessMap
+      des: UseRoughnessMap
+    - t: 2
+      name: _Glossiness
+      des: Roughness
+    - t: 2
+      name: _UseEmissiveMap
+      des: UseEmissiveMap
+    - t: 2
+      name: Boolean_8A2B8817
+      des: UseOpacityMap
+    - t: 2
+      name: _OpacityThreshold
+      des: MaskThreshold
+    - t: 4
+      name: _MainTex
+      des: ColorMap
+    - t: 4
+      name: _BumpMap
+      des: NormalMap
+    - t: 4
+      name: _MetallicGlossMap
+      des: MetallicMap
+    - t: 4
+      name: _SpecGlossMap
+      des: RoughnessMap
+    - t: 4
+      name: _EmissionMap
+      des: EmissiveMap
+    - t: 4
+      name: _OcclusionMap
+      des: MaskMap
+  - name: Universal Render Pipeline/Autodesk Interactive/Autodesk Interactive Transparent
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Autodesk Interactive/Autodesk
+      Interactive Transparent.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: BaseColor
+    - t: 0
+      name: _EmissionColor
+      des: Emissive
+    - t: 1
+      name: _UvOffset
+      des: UVOffset
+    - t: 1
+      name: _UvTiling
+      des: UVScale
+    - t: 2
+      name: _UseColorMap
+      des: UseColorMap
+    - t: 2
+      name: _UseNormalMap
+      des: UseNormalMap
+    - t: 2
+      name: _UseMetallicMap
+      des: UseMetallicMap
+    - t: 2
+      name: _Metallic
+      des: Metallic
+    - t: 2
+      name: _UseRoughnessMap
+      des: UseRoughnessMap
+    - t: 2
+      name: _Glossiness
+      des: Roughness
+    - t: 2
+      name: _UseEmissiveMap
+      des: UseEmissiveMap
+    - t: 2
+      name: _UseOpacityMap
+      des: UseOpacityMap
+    - t: 2
+      name: _Opacity
+      des: Opacity
+    - t: 4
+      name: _MainTex
+      des: ColorMap
+    - t: 4
+      name: _BumpMap
+      des: NormalMap
+    - t: 4
+      name: _MetallicGlossMap
+      des: MetallicMap
+    - t: 4
+      name: _SpecGlossMap
+      des: RoughnessMap
+    - t: 4
+      name: _EmissionMap
+      des: EmissiveMap
+  - name: Universal Render Pipeline/Autodesk Interactive/Autodesk Interactive
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Autodesk Interactive/Autodesk
+      Interactive.shadergraph
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: BaseColor
+    - t: 0
+      name: _EmissionColor
+      des: Emissive
+    - t: 1
+      name: _UvOffset
+      des: UVOffset
+    - t: 1
+      name: _UvTiling
+      des: UVScale
+    - t: 2
+      name: _UseColorMap
+      des: UseColorMap
+    - t: 2
+      name: _UseNormalMap
+      des: UseNormalMap
+    - t: 2
+      name: _UseMetallicMap
+      des: UseMetallicMap
+    - t: 2
+      name: _Metallic
+      des: Metallic
+    - t: 2
+      name: _UseRoughnessMap
+      des: UseRoughnessMap
+    - t: 2
+      name: _Glossiness
+      des: Roughness
+    - t: 2
+      name: _UseEmissiveMap
+      des: UseEmissiveMap
+    - t: 2
+      name: _UseAoMap
+      des: UseAoMap
+    - t: 4
+      name: _MainTex
+      des: ColorMap
+    - t: 4
+      name: _BumpMap
+      des: NormalMap
+    - t: 4
+      name: _MetallicGlossMap
+      des: MetallicMap
+    - t: 4
+      name: _SpecGlossMap
+      des: RoughnessMap
+    - t: 4
+      name: _EmissionMap
+      des: EmissiveMap
+    - t: 4
+      name: _OcclusionMap
+      des: AoMap
+  - name: Universal Render Pipeline/Baked Lit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/BakedLit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Color
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __blend
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _SrcBlend
+      des: Src
+    - t: 2
+      name: _DstBlend
+      des: Dst
+    - t: 2
+      name: _ZWrite
+      des: ZWrite
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 3
+      name: _Cutoff
+      des: AlphaCutout
+    - t: 4
+      name: _BaseMap
+      des: Texture
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+  - name: Universal Render Pipeline/Lit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Color
+    - t: 0
+      name: _SpecColor
+      des: Specular
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 0
+      name: _Color
+      des: Base Color
+    - t: 2
+      name: _WorkflowMode
+      des: WorkflowMode
+    - t: 2
+      name: _SmoothnessTextureChannel
+      des: Smoothness texture channel
+    - t: 2
+      name: _SpecularHighlights
+      des: Specular Highlights
+    - t: 2
+      name: _EnvironmentReflections
+      des: Environment Reflections
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __blend
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _ReceiveShadows
+      des: Receive Shadows
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 2
+      name: _GlossMapScale
+      des: Smoothness
+    - t: 2
+      name: _Glossiness
+      des: Smoothness
+    - t: 2
+      name: _GlossyReflections
+      des: EnvironmentReflections
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Smoothness
+      des: Smoothness
+    - t: 3
+      name: _GlossMapScale
+      des: Smoothness Scale
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _OcclusionStrength
+      des: Strength
+    - t: 4
+      name: _BaseMap
+      des: Albedo
+    - t: 4
+      name: _MetallicGlossMap
+      des: Metallic
+    - t: 4
+      name: _SpecGlossMap
+      des: Specular
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _OcclusionMap
+      des: Occlusion
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+    - t: 4
+      name: _MainTex
+      des: BaseMap
+  - name: Universal Render Pipeline/Nature/SpeedTree7
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree7.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _HueVariation
+      des: Hue Variation
+    - t: 2
+      name: _Cull
+      des: Cull
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _WindQuality
+      des: Wind Quality
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+    - t: 4
+      name: _DetailTex
+      des: Detail
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+  - name: Universal Render Pipeline/Nature/SpeedTree7 Billboard
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree7Billboard.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _HueVariation
+      des: Hue Variation
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _WindQuality
+      des: Wind Quality
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+  - name: Universal Render Pipeline/Nature/SpeedTree8
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree8.shader
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _HueVariationColor
+      des: Hue Variation Color
+    - t: 0
+      name: _SubsurfaceColor
+      des: Subsurface Color
+    - t: 2
+      name: _HueVariationKwToggle
+      des: Hue Variation
+    - t: 2
+      name: _NormalMapKwToggle
+      des: Normal Mapping
+    - t: 2
+      name: _SubsurfaceKwToggle
+      des: Subsurface
+    - t: 2
+      name: _BillboardKwToggle
+      des: Billboard
+    - t: 2
+      name: _TwoSided
+      des: Two Sided
+    - t: 3
+      name: _Glossiness
+      des: Smoothness
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _SubsurfaceIndirect
+      des: Subsurface Indirect
+    - t: 3
+      name: _BillboardShadowFade
+      des: Billboard Shadow Fade
+    - t: 3
+      name: _WindQuality
+      des: Wind Quality
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Transparency (A)
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _ExtraTex
+      des: Smoothness (R), Metallic (G), AO (B)
+    - t: 4
+      name: _SubsurfaceTex
+      des: Subsurface (RGB)
+  - name: Universal Render Pipeline/Particles/Lit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesLit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Base Color
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 0
+      name: _Color
+      des: color
+    - t: 1
+      name: _BaseColorAddSubDiff
+      des: _ColorMode
+    - t: 1
+      name: _SoftParticleFadeParams
+      des: __softparticlefadeparams
+    - t: 1
+      name: _CameraFadeParams
+      des: __camerafadeparams
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _ReceiveShadows
+      des: Receive Shadows
+    - t: 2
+      name: _SoftParticlesNearFadeDistance
+      des: Soft Particles Near Fade
+    - t: 2
+      name: _SoftParticlesFarFadeDistance
+      des: Soft Particles Far Fade
+    - t: 2
+      name: _CameraNearFadeDistance
+      des: Camera Near Fade
+    - t: 2
+      name: _CameraFarFadeDistance
+      des: Camera Far Fade
+    - t: 2
+      name: _DistortionBlend
+      des: Distortion Blend
+    - t: 2
+      name: _DistortionStrength
+      des: Distortion Strength
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __mode
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _BlendOp
+      des: __blendop
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _ColorMode
+      des: _ColorMode
+    - t: 2
+      name: _FlipbookBlending
+      des: __flipbookblending
+    - t: 2
+      name: _SoftParticlesEnabled
+      des: __softparticlesenabled
+    - t: 2
+      name: _CameraFadingEnabled
+      des: __camerafadingenabled
+    - t: 2
+      name: _DistortionEnabled
+      des: __distortionenabled
+    - t: 2
+      name: _DistortionStrengthScaled
+      des: Distortion Strength Scaled
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 2
+      name: _FlipbookMode
+      des: flipbook
+    - t: 2
+      name: _Glossiness
+      des: gloss
+    - t: 2
+      name: _Mode
+      des: mode
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _Smoothness
+      des: Smoothness
+    - t: 4
+      name: _BaseMap
+      des: Base Map
+    - t: 4
+      name: _MetallicGlossMap
+      des: Metallic Map
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+  - name: Universal Render Pipeline/Particles/Simple Lit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesSimpleLit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Base Color
+    - t: 0
+      name: _SpecColor
+      des: Specular
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 0
+      name: _Color
+      des: color
+    - t: 1
+      name: _BaseColorAddSubDiff
+      des: _ColorMode
+    - t: 1
+      name: _SoftParticleFadeParams
+      des: __softparticlefadeparams
+    - t: 1
+      name: _CameraFadeParams
+      des: __camerafadeparams
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _SmoothnessSource
+      des: Smoothness Source
+    - t: 2
+      name: _SpecularHighlights
+      des: Specular Highlights
+    - t: 2
+      name: _ReceiveShadows
+      des: Receive Shadows
+    - t: 2
+      name: _SoftParticlesNearFadeDistance
+      des: Soft Particles Near Fade
+    - t: 2
+      name: _SoftParticlesFarFadeDistance
+      des: Soft Particles Far Fade
+    - t: 2
+      name: _CameraNearFadeDistance
+      des: Camera Near Fade
+    - t: 2
+      name: _CameraFarFadeDistance
+      des: Camera Far Fade
+    - t: 2
+      name: _DistortionBlend
+      des: Distortion Blend
+    - t: 2
+      name: _DistortionStrength
+      des: Distortion Strength
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __mode
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _BlendOp
+      des: __blendop
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _ColorMode
+      des: _ColorMode
+    - t: 2
+      name: _FlipbookBlending
+      des: __flipbookblending
+    - t: 2
+      name: _SoftParticlesEnabled
+      des: __softparticlesenabled
+    - t: 2
+      name: _CameraFadingEnabled
+      des: __camerafadingenabled
+    - t: 2
+      name: _DistortionEnabled
+      des: __distortionenabled
+    - t: 2
+      name: _DistortionStrengthScaled
+      des: Distortion Strength Scaled
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 2
+      name: _FlipbookMode
+      des: flipbook
+    - t: 2
+      name: _Glossiness
+      des: gloss
+    - t: 2
+      name: _Mode
+      des: mode
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Smoothness
+      des: Smoothness
+    - t: 4
+      name: _BaseMap
+      des: Base Map
+    - t: 4
+      name: _SpecGlossMap
+      des: Specular
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+  - name: Universal Render Pipeline/Particles/Unlit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesUnlit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Base Color
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 0
+      name: _Color
+      des: color
+    - t: 1
+      name: _BaseColorAddSubDiff
+      des: _ColorMode
+    - t: 1
+      name: _SoftParticleFadeParams
+      des: __softparticlefadeparams
+    - t: 1
+      name: _CameraFadeParams
+      des: __camerafadeparams
+    - t: 2
+      name: _SoftParticlesNearFadeDistance
+      des: Soft Particles Near Fade
+    - t: 2
+      name: _SoftParticlesFarFadeDistance
+      des: Soft Particles Far Fade
+    - t: 2
+      name: _CameraNearFadeDistance
+      des: Camera Near Fade
+    - t: 2
+      name: _CameraFarFadeDistance
+      des: Camera Far Fade
+    - t: 2
+      name: _DistortionBlend
+      des: Distortion Blend
+    - t: 2
+      name: _DistortionStrength
+      des: Distortion Strength
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __mode
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _BlendOp
+      des: __blendop
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _ColorMode
+      des: _ColorMode
+    - t: 2
+      name: _FlipbookBlending
+      des: __flipbookblending
+    - t: 2
+      name: _SoftParticlesEnabled
+      des: __softparticlesenabled
+    - t: 2
+      name: _CameraFadingEnabled
+      des: __camerafadingenabled
+    - t: 2
+      name: _DistortionEnabled
+      des: __distortionenabled
+    - t: 2
+      name: _DistortionStrengthScaled
+      des: Distortion Strength Scaled
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 2
+      name: _FlipbookMode
+      des: flipbook
+    - t: 2
+      name: _Mode
+      des: mode
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 4
+      name: _BaseMap
+      des: Base Map
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+  - name: Hidden/Universal Render Pipeline/Bloom
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/Bloom.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Source
+  - name: Hidden/Universal Render Pipeline/BokehDepthOfField
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/BokehDepthOfField.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Source
+  - name: Hidden/Universal Render Pipeline/CameraMotionBlur
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/CameraMotionBlur.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Source
+  - name: Hidden/Universal Render Pipeline/FinalPost
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/FinalPost.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/GaussianDepthOfField
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/GaussianDepthOfField.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Source
+  - name: Hidden/Universal Render Pipeline/LutBuilderHdr
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderHdr.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/LutBuilderLdr
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderLdr.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/PaniniProjection
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/PaniniProjection.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Source
+  - name: Hidden/Universal Render Pipeline/Stop NaN
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/StopNaN.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Source
+  - name: Hidden/Universal Render Pipeline/SubpixelMorphologicalAntialiasing
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader
+    propertyInfos:
+    - t: 2
+      name: _StencilRef
+      des: _StencilRef
+    - t: 2
+      name: _StencilMask
+      des: _StencilMask
+  - name: Hidden/Universal Render Pipeline/UberPost
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/UberPost.shader
+    propertyInfos: []
+  - name: Universal Render Pipeline/Simple Lit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Base Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 0
+      name: _EmissionColor
+      des: Emission Color
+    - t: 0
+      name: _Color
+      des: Base Color
+    - t: 2
+      name: _SmoothnessSource
+      des: Smoothness Source
+    - t: 2
+      name: _SpecularHighlights
+      des: Specular Highlights
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __blend
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _ReceiveShadows
+      des: Receive Shadows
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 2
+      name: _Smoothness
+      des: SMoothness
+    - t: 2
+      name: _Shininess
+      des: Smoothness
+    - t: 2
+      name: _GlossinessSource
+      des: GlossinessSource
+    - t: 2
+      name: _SpecSource
+      des: SpecularHighlights
+    - t: 3
+      name: _Cutoff
+      des: Alpha Clipping
+    - t: 4
+      name: _BaseMap
+      des: Base Map (RGB) Smoothness / Alpha (A)
+    - t: 4
+      name: _SpecGlossMap
+      des: Specular Map
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _EmissionMap
+      des: Emission Map
+    - t: 4
+      name: _MainTex
+      des: BaseMap
+  - name: Hidden/TerrainEngine/Details/UniversalPipeline/Vertexlit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainDetailLit.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Main Texture
+  - name: Universal Render Pipeline/Terrain/Lit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Main Color
+    - t: 2
+      name: _EnableHeightBlend
+      des: EnableHeightBlend
+    - t: 2
+      name: _NumLayersCount
+      des: Total Layer Count
+    - t: 2
+      name: _EnableInstancedPerPixelNormal
+      des: Enable Instanced per-pixel normal
+    - t: 3
+      name: _HeightTransition
+      des: Height Transition
+    - t: 3
+      name: _Metallic0
+      des: Metallic 0
+    - t: 3
+      name: _Metallic1
+      des: Metallic 1
+    - t: 3
+      name: _Metallic2
+      des: Metallic 2
+    - t: 3
+      name: _Metallic3
+      des: Metallic 3
+    - t: 3
+      name: _Smoothness0
+      des: Smoothness 0
+    - t: 3
+      name: _Smoothness1
+      des: Smoothness 1
+    - t: 3
+      name: _Smoothness2
+      des: Smoothness 2
+    - t: 3
+      name: _Smoothness3
+      des: Smoothness 3
+    - t: 4
+      name: _Control
+      des: Control (RGBA)
+    - t: 4
+      name: _Splat3
+      des: Layer 3 (A)
+    - t: 4
+      name: _Splat2
+      des: Layer 2 (B)
+    - t: 4
+      name: _Splat1
+      des: Layer 1 (G)
+    - t: 4
+      name: _Splat0
+      des: Layer 0 (R)
+    - t: 4
+      name: _Normal3
+      des: Normal 3 (A)
+    - t: 4
+      name: _Normal2
+      des: Normal 2 (B)
+    - t: 4
+      name: _Normal1
+      des: Normal 1 (G)
+    - t: 4
+      name: _Normal0
+      des: Normal 0 (R)
+    - t: 4
+      name: _Mask3
+      des: Mask 3 (A)
+    - t: 4
+      name: _Mask2
+      des: Mask 2 (B)
+    - t: 4
+      name: _Mask1
+      des: Mask 1 (G)
+    - t: 4
+      name: _Mask0
+      des: Mask 0 (R)
+    - t: 4
+      name: _MainTex
+      des: BaseMap (RGB)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitAdd.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Main Color
+    - t: 2
+      name: _NumLayersCount
+      des: Total Layer Count
+    - t: 3
+      name: _Metallic0
+      des: Metallic 0
+    - t: 3
+      name: _Metallic1
+      des: Metallic 1
+    - t: 3
+      name: _Metallic2
+      des: Metallic 2
+    - t: 3
+      name: _Metallic3
+      des: Metallic 3
+    - t: 3
+      name: _Smoothness0
+      des: Smoothness 0
+    - t: 3
+      name: _Smoothness1
+      des: Smoothness 1
+    - t: 3
+      name: _Smoothness2
+      des: Smoothness 2
+    - t: 3
+      name: _Smoothness3
+      des: Smoothness 3
+    - t: 4
+      name: _Control
+      des: Control (RGBA)
+    - t: 4
+      name: _Splat3
+      des: Layer 3 (A)
+    - t: 4
+      name: _Splat2
+      des: Layer 2 (B)
+    - t: 4
+      name: _Splat1
+      des: Layer 1 (G)
+    - t: 4
+      name: _Splat0
+      des: Layer 0 (R)
+    - t: 4
+      name: _Normal3
+      des: Normal 3 (A)
+    - t: 4
+      name: _Normal2
+      des: Normal 2 (B)
+    - t: 4
+      name: _Normal1
+      des: Normal 1 (G)
+    - t: 4
+      name: _Normal0
+      des: Normal 0 (R)
+    - t: 4
+      name: _Mask3
+      des: Mask 3 (A)
+    - t: 4
+      name: _Mask2
+      des: Mask 2 (B)
+    - t: 4
+      name: _Mask1
+      des: Mask 1 (G)
+    - t: 4
+      name: _Mask0
+      des: Mask 0 (R)
+    - t: 4
+      name: _BaseMap
+      des: BaseMap (RGB)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitBase.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Color
+    - t: 4
+      name: _MainTex
+      des: Albedo(RGB), Smoothness(A)
+    - t: 4
+      name: _MetallicTex
+      des: Metallic (R)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/Universal Render Pipeline/Terrain/Lit (Basemap Gen)
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitBasemapGen.shader
+    propertyInfos:
+    - t: 2
+      name: _NumLayersCount
+      des: Total Layer Count
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+    - t: 3
+      name: _Metallic0
+      des: Metallic 0
+    - t: 3
+      name: _Metallic1
+      des: Metallic 1
+    - t: 3
+      name: _Metallic2
+      des: Metallic 2
+    - t: 3
+      name: _Metallic3
+      des: Metallic 3
+    - t: 3
+      name: _Smoothness0
+      des: Smoothness 0
+    - t: 3
+      name: _Smoothness1
+      des: Smoothness 1
+    - t: 3
+      name: _Smoothness2
+      des: Smoothness 2
+    - t: 3
+      name: _Smoothness3
+      des: Smoothness 3
+    - t: 4
+      name: _Control
+      des: AlphaMap
+    - t: 4
+      name: _Splat0
+      des: Layer 0 (R)
+    - t: 4
+      name: _Splat1
+      des: Layer 1 (G)
+    - t: 4
+      name: _Splat2
+      des: Layer 2 (B)
+    - t: 4
+      name: _Splat3
+      des: Layer 3 (A)
+    - t: 4
+      name: _Mask3
+      des: Mask 3 (A)
+    - t: 4
+      name: _Mask2
+      des: Mask 2 (B)
+    - t: 4
+      name: _Mask1
+      des: Mask 1 (G)
+    - t: 4
+      name: _Mask0
+      des: Mask 0 (R)
+  - name: Hidden/TerrainEngine/Details/UniversalPipeline/WavingDoublePass
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrass.shader
+    propertyInfos:
+    - t: 0
+      name: _WavingTint
+      des: Fade Color
+    - t: 1
+      name: _WaveAndDistance
+      des: Wave and distance
+    - t: 2
+      name: _Cutoff
+      des: Cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Hidden/TerrainEngine/Details/UniversalPipeline/BillboardWavingDoublePass
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrassBillboard.shader
+    propertyInfos:
+    - t: 0
+      name: _WavingTint
+      des: Fade Color
+    - t: 1
+      name: _WaveAndDistance
+      des: Wave and distance
+    - t: 2
+      name: _Cutoff
+      des: Cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Universal Render Pipeline/Unlit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
+    propertyInfos:
+    - t: 0
+      name: _BaseColor
+      des: Color
+    - t: 0
+      name: _Color
+      des: Base Color
+    - t: 2
+      name: _Surface
+      des: __surface
+    - t: 2
+      name: _Blend
+      des: __blend
+    - t: 2
+      name: _AlphaClip
+      des: __clip
+    - t: 2
+      name: _SrcBlend
+      des: Src
+    - t: 2
+      name: _DstBlend
+      des: Dst
+    - t: 2
+      name: _ZWrite
+      des: ZWrite
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _QueueOffset
+      des: Queue offset
+    - t: 2
+      name: _SampleGI
+      des: SampleGI
+    - t: 3
+      name: _Cutoff
+      des: AlphaCutout
+    - t: 4
+      name: _BaseMap
+      des: Texture
+    - t: 4
+      name: _MainTex
+      des: BaseMap
+  - name: Hidden/Universal Render Pipeline/Blit
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Utils/Blit.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/CopyDepth
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Utils/CopyDepth.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/FallbackError
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
+    propertyInfos: []
+  - name: Hidden/Universal Render Pipeline/Sampling
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Albedo
+  - name: Hidden/Universal Render Pipeline/ScreenSpaceShadows
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.render-pipelines.universal/Shaders/Utils/ScreenSpaceShadows.shader
+    propertyInfos: []
+  - name: Hidden/BlitNoAlpha
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.shadergraph/Editor/Resources/Shaders/BlitNoAlpha.shader
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Checkerboard
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.shadergraph/Editor/Resources/Shaders/Checkerboard.shader
+    propertyInfos: []
+  - name: Hidden/Shader Graph/FallbackError
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.shadergraph/Editor/Resources/Shaders/FallbackError.shader
+    propertyInfos: []
+  - name: Hidden/TMP/Internal/Editor/Distance Field SSD
+    supported: 1
+    hasError: 0
+    path: Packages/com.unity.textmeshpro/Editor Resources/Shaders/TMP_SDF Internal
+      Editor.shader
+    propertyInfos:
+    - t: 0
+      name: _FaceColor
+      des: Face Color
+    - t: 0
+      name: _OutlineColor
+      des: Outline Color
+    - t: 0
+      name: _UnderlayColor
+      des: Border Color
+    - t: 2
+      name: _WeightNormal
+      des: Weight Normal
+    - t: 2
+      name: _WeightBold
+      des: Weight Bold
+    - t: 2
+      name: _ShaderFlags
+      des: Flags
+    - t: 2
+      name: _ScaleRatioA
+      des: Scale RatioA
+    - t: 2
+      name: _ScaleRatioB
+      des: Scale RatioB
+    - t: 2
+      name: _ScaleRatioC
+      des: Scale RatioC
+    - t: 2
+      name: _TextureWidth
+      des: Texture Width
+    - t: 2
+      name: _TextureHeight
+      des: Texture Height
+    - t: 2
+      name: _GradientScale
+      des: Gradient Scale
+    - t: 2
+      name: _ScaleX
+      des: Scale X
+    - t: 2
+      name: _ScaleY
+      des: Scale Y
+    - t: 2
+      name: _VertexOffsetX
+      des: Vertex OffsetX
+    - t: 2
+      name: _VertexOffsetY
+      des: Vertex OffsetY
+    - t: 3
+      name: _FaceDilate
+      des: Face Dilate
+    - t: 3
+      name: _OutlineWidth
+      des: Outline Thickness
+    - t: 3
+      name: _OutlineSoftness
+      des: Outline Softness
+    - t: 3
+      name: _UnderlayOffsetX
+      des: Border OffsetX
+    - t: 3
+      name: _UnderlayOffsetY
+      des: Border OffsetY
+    - t: 3
+      name: _UnderlayDilate
+      des: Border Dilate
+    - t: 3
+      name: _UnderlaySoftness
+      des: Border Softness
+    - t: 3
+      name: _PerspectiveFilter
+      des: Perspective Correction
+    - t: 3
+      name: _Sharpness
+      des: Sharpness
+    - t: 4
+      name: _MainTex
+      des: Font Atlas
+  - name: AR/TangoARRender
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _ScreenOrientation
+      des: Screen Orientation
+    - t: 2
+      name: _HeightScale
+      des: Height Scale
+  - name: Autodesk Interactive
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 2
+      name: _SpecularHighlights
+      des: Specular Highlights
+    - t: 2
+      name: _GlossyReflections
+      des: Glossy Reflections
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _DetailNormalMapScale
+      des: Scale
+    - t: 2
+      name: _UVSec
+      des: UV Set for secondary textures
+    - t: 2
+      name: _Mode
+      des: __mode
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Glossiness
+      des: Roughness
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _Parallax
+      des: Height Scale
+    - t: 3
+      name: _OcclusionStrength
+      des: Strength
+    - t: 4
+      name: _MainTex
+      des: Albedo
+    - t: 4
+      name: _SpecGlossMap
+      des: Roughness Map
+    - t: 4
+      name: _MetallicGlossMap
+      des: Metallic
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _ParallaxMap
+      des: Height Map
+    - t: 4
+      name: _OcclusionMap
+      des: Occlusion
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+    - t: 4
+      name: _DetailMask
+      des: Detail Mask
+    - t: 4
+      name: _DetailAlbedoMap
+      des: Detail Albedo x2
+    - t: 4
+      name: _DetailNormalMap
+      des: Normal Map
+  - name: FX/Flare
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: GUI/Text Shader
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Text Color
+    - t: 4
+      name: _MainTex
+      des: Font Texture
+  - name: Hidden/BlitCopy
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Multiplicative color
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/BlitCopyDepth
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/BlitCopyWithDepth
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Multiplicative color
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/BlitToDepth
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Multiplicative color
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/BlitToDepth_MSAA
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: DepthTexture
+  - name: Hidden/Compositing
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: _MainTex (A)
+    - t: 4
+      name: _SecondTex
+      des: _SecondTex (A)
+  - name: Hidden/ConvertTexture
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/CubeBlend
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _value
+      des: Value
+    - t: 4
+      name: _TexA
+      des: Cubemap
+    - t: 4
+      name: _TexB
+      des: Cubemap
+  - name: Hidden/CubeBlur
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _Texel
+      des: Texel
+    - t: 2
+      name: _Level
+      des: Level
+    - t: 2
+      name: _Scale
+      des: Scale
+    - t: 4
+      name: _MainTex
+      des: Main
+  - name: Hidden/CubeCopy
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _Level
+      des: Level
+    - t: 4
+      name: _MainTex
+      des: Main
+  - name: Hidden/FrameDebuggerRenderTargetDisplay
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: 
+  - name: Hidden/GIDebug/ShowLightMask
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: SrcBlend
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _LightTexture
+      des: Light texture
+  - name: Hidden/GIDebug/TextureUV
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Hidden/GIDebug/UV1sAsPositions
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+  - name: Hidden/GIDebug/VertexColors
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Hidden/InternalClear
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-Colored
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 2
+      name: _SrcBlend
+      des: SrcBlend
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+    - t: 2
+      name: _ZWrite
+      des: ZWrite
+    - t: 2
+      name: _ZTest
+      des: ZTest
+    - t: 2
+      name: _Cull
+      des: Cull
+    - t: 2
+      name: _ZBias
+      des: ZBias
+  - name: Hidden/Internal-CombineDepthNormals
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-CubemapToEquirect
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-DeferredReflections
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: 
+    - t: 2
+      name: _DstBlend
+      des: 
+  - name: Hidden/Internal-DeferredShading
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: 
+    - t: 2
+      name: _DstBlend
+      des: 
+    - t: 4
+      name: _LightTexture0
+      des: 
+    - t: 4
+      name: _LightTextureB0
+      des: 
+    - t: 4
+      name: _ShadowMapTexture
+      des: 
+  - name: Hidden/Internal-DepthNormalsTexture
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: 
+    - t: 2
+      name: _Cutoff
+      des: 
+    - t: 4
+      name: _MainTex
+      des: 
+  - name: Hidden/InternalErrorShader
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-Flare
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-GUIRoundedRect
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: SrcBlend
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-GUIRoundedRectWithColorPerBorder
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _SrcBlend
+      des: SrcBlend
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-GUITexture
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-GUITextureBlit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-GUITextureClip
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-GUITextureClipText
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/Internal-Halo
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-MotionVectors
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-ODSWorldTexture
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: 
+    - t: 2
+      name: _Cutoff
+      des: 
+    - t: 4
+      name: _MainTex
+      des: 
+  - name: Hidden/Internal-PrePassLighting
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _LightTexture0
+      des: 
+    - t: 4
+      name: _LightTextureB0
+      des: 
+    - t: 4
+      name: _ShadowMapTexture
+      des: 
+  - name: Hidden/Internal-ScreenSpaceShadows
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _ShadowMapTexture
+      des: 
+    - t: 4
+      name: _ODSWorldTexture
+      des: 
+  - name: Hidden/Internal-StencilWrite
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Internal-UIRAtlasBlitCopy
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex0
+      des: Texture
+    - t: 4
+      name: _MainTex1
+      des: Texture
+    - t: 4
+      name: _MainTex2
+      des: Texture
+    - t: 4
+      name: _MainTex3
+      des: Texture
+    - t: 4
+      name: _MainTex4
+      des: Texture
+    - t: 4
+      name: _MainTex5
+      des: Texture
+    - t: 4
+      name: _MainTex6
+      des: Texture
+    - t: 4
+      name: _MainTex7
+      des: Texture
+  - name: Hidden/Internal-UIRDefault
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilCompFront
+      des: __scf
+    - t: 2
+      name: _StencilPassFront
+      des: __spf
+    - t: 2
+      name: _StencilZFailFront
+      des: __szf
+    - t: 2
+      name: _StencilFailFront
+      des: __sff
+    - t: 2
+      name: _StencilCompBack
+      des: __scb
+    - t: 2
+      name: _StencilPassBack
+      des: __spb
+    - t: 2
+      name: _StencilZFailBack
+      des: __szb
+    - t: 2
+      name: _StencilFailBack
+      des: __sfb
+    - t: 4
+      name: _MainTex
+      des: Atlas
+    - t: 4
+      name: _FontTex
+      des: Font
+    - t: 4
+      name: _CustomTex
+      des: Custom
+  - name: Hidden/Nature/Terrain/Utilities
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/Nature/Tree Creator Albedo Rendertex
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _HalfOverCutoff
+      des: 0.5 / alpha cutoff
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpSpecMap
+      des: Normalmap (GA) Spec (R) Shadow Offset (B)
+    - t: 4
+      name: _TranslucencyMap
+      des: Trans (B) Gloss(A)
+  - name: Hidden/Nature/Tree Creator Bark Optimized
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpSpecMap
+      des: Normalmap (GA) Spec (R)
+    - t: 4
+      name: _TranslucencyMap
+      des: Trans (RGB) Gloss(A)
+  - name: Hidden/Nature/Tree Creator Bark Rendertex
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpSpecMap
+      des: Normalmap (GA) Spec (R)
+    - t: 4
+      name: _TranslucencyMap
+      des: Trans (RGB) Gloss(A)
+  - name: Hidden/Nature/Tree Creator Leaves Fast Optimized
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 3
+      name: _ShadowStrength
+      des: Shadow Strength
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _ShadowTex
+      des: Shadow (RGB)
+  - name: Hidden/Nature/Tree Creator Leaves Optimized
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _ShadowOffsetScale
+      des: Shadow Offset Scale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 3
+      name: _ShadowStrength
+      des: Shadow Strength
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _ShadowTex
+      des: Shadow (RGB)
+    - t: 4
+      name: _BumpSpecMap
+      des: Normalmap (GA) Spec (R) Shadow Offset (B)
+    - t: 4
+      name: _TranslucencyMap
+      des: Trans (B) Gloss(A)
+  - name: Hidden/Nature/Tree Creator Leaves Rendertex
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _HalfOverCutoff
+      des: 0.5 / alpha cutoff
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpSpecMap
+      des: Normalmap (GA) Spec (R) Shadow Offset (B)
+    - t: 4
+      name: _TranslucencyMap
+      des: Trans (B) Gloss(A)
+  - name: Hidden/Nature/Tree Creator Normal Rendertex
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _HalfOverCutoff
+      des: 0.5 / alpha cutoff
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpSpecMap
+      des: Normalmap (GA) Spec (R) Shadow Offset (B)
+    - t: 4
+      name: _TranslucencyMap
+      des: Trans (B) Gloss(A)
+  - name: Hidden/Nature/Tree Soft Occlusion Bark Rendertex
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _BaseLight
+      des: Base Light
+    - t: 3
+      name: _AO
+      des: Amb. Occlusion
+    - t: 4
+      name: _MainTex
+      des: Main Texture
+  - name: Hidden/Nature/Tree Soft Occlusion Leaves Rendertex
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _HalfOverCutoff
+      des: 0.5 / Alpha cutoff
+    - t: 3
+      name: _BaseLight
+      des: Base Light
+    - t: 3
+      name: _AO
+      des: Amb. Occlusion
+    - t: 3
+      name: _Occlusion
+      des: Dir Occlusion
+    - t: 4
+      name: _MainTex
+      des: Main Texture
+  - name: Hidden/TerrainEngine/BillboardTree
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Hidden/TerrainEngine/BrushPreview
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/TerrainEngine/CameraFacingBillboardTree
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 2
+      name: _AlphaToMask
+      des: AlphaToMask
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _NormalTex
+      des: Base (RGB) Alpha (A)
+  - name: Hidden/TerrainEngine/CrossBlendNeighbors
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _TopTex
+      des: Top Texture
+    - t: 4
+      name: _BottomTex
+      des: Bottom Texture
+    - t: 4
+      name: _LeftTex
+      des: Left Texture
+    - t: 4
+      name: _RightTex
+      des: Right Texture
+  - name: Hidden/TerrainEngine/Details/BillboardWavingDoublePass
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _WavingTint
+      des: Fade Color
+    - t: 1
+      name: _WaveAndDistance
+      des: Wave and distance
+    - t: 2
+      name: _Cutoff
+      des: Cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Hidden/TerrainEngine/Details/Vertexlit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Main Texture
+  - name: Hidden/TerrainEngine/Details/WavingDoublePass
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _WavingTint
+      des: Fade Color
+    - t: 1
+      name: _WaveAndDistance
+      des: Wave and distance
+    - t: 2
+      name: _Cutoff
+      des: Cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Hidden/TerrainEngine/GenerateNormalmap
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/TerrainEngine/HeightBlitCopy
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/TerrainEngine/PaintHeight
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/TerrainEngine/Splatmap/Diffuse-AddPass
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/TerrainEngine/Splatmap/Diffuse-Base
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/TerrainEngine/Splatmap/Diffuse-BaseGen
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+  - name: Hidden/TerrainEngine/Splatmap/Specular-AddPass
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/TerrainEngine/Splatmap/Specular-Base
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/TerrainEngine/Splatmap/Standard-AddPass
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/TerrainEngine/Splatmap/Standard-Base
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Smoothness (A)
+    - t: 4
+      name: _MetallicTex
+      des: Metallic (R)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Hidden/TerrainEngine/Splatmap/Standard-BaseGen
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 2
+      name: _DstBlend
+      des: DstBlend
+  - name: Hidden/TerrainEngine/TerrainLayerUtils
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/TextCore/Distance Field
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _FaceColor
+      des: Face Color
+    - t: 0
+      name: _OutlineColor
+      des: Outline Color
+    - t: 2
+      name: _WeightNormal
+      des: Weight Normal
+    - t: 2
+      name: _WeightBold
+      des: Weight Bold
+    - t: 2
+      name: _ScaleRatioA
+      des: Scale RatioA
+    - t: 2
+      name: _ScaleRatioB
+      des: Scale RatioB
+    - t: 2
+      name: _ScaleRatioC
+      des: Scale RatioC
+    - t: 2
+      name: _GradientScale
+      des: Gradient Scale
+    - t: 2
+      name: _ScaleX
+      des: Scale X
+    - t: 2
+      name: _ScaleY
+      des: Scale Y
+    - t: 2
+      name: _VertexOffsetX
+      des: Vertex OffsetX
+    - t: 2
+      name: _VertexOffsetY
+      des: Vertex OffsetY
+    - t: 3
+      name: _FaceDilate
+      des: Face Dilate
+    - t: 3
+      name: _OutlineWidth
+      des: Outline Thickness
+    - t: 3
+      name: _OutlineSoftness
+      des: Outline Softness
+    - t: 3
+      name: _Sharpness
+      des: Sharpness
+    - t: 4
+      name: _MainTex
+      des: Font Atlas
+  - name: Hidden/TextCore/Distance Field SSD
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _FaceColor
+      des: Face Color
+    - t: 0
+      name: _OutlineColor
+      des: Outline Color
+    - t: 0
+      name: _UnderlayColor
+      des: Border Color
+    - t: 2
+      name: _WeightNormal
+      des: Weight Normal
+    - t: 2
+      name: _WeightBold
+      des: Weight Bold
+    - t: 2
+      name: _ShaderFlags
+      des: Flags
+    - t: 2
+      name: _ScaleRatioA
+      des: Scale RatioA
+    - t: 2
+      name: _ScaleRatioB
+      des: Scale RatioB
+    - t: 2
+      name: _ScaleRatioC
+      des: Scale RatioC
+    - t: 2
+      name: _TextureWidth
+      des: Texture Width
+    - t: 2
+      name: _TextureHeight
+      des: Texture Height
+    - t: 2
+      name: _GradientScale
+      des: Gradient Scale
+    - t: 2
+      name: _ScaleX
+      des: Scale X
+    - t: 2
+      name: _ScaleY
+      des: Scale Y
+    - t: 2
+      name: _VertexOffsetX
+      des: Vertex OffsetX
+    - t: 2
+      name: _VertexOffsetY
+      des: Vertex OffsetY
+    - t: 3
+      name: _FaceDilate
+      des: Face Dilate
+    - t: 3
+      name: _OutlineWidth
+      des: Outline Thickness
+    - t: 3
+      name: _OutlineSoftness
+      des: Outline Softness
+    - t: 3
+      name: _UnderlayOffsetX
+      des: Border OffsetX
+    - t: 3
+      name: _UnderlayOffsetY
+      des: Border OffsetY
+    - t: 3
+      name: _UnderlayDilate
+      des: Border Dilate
+    - t: 3
+      name: _UnderlaySoftness
+      des: Border Softness
+    - t: 3
+      name: _Sharpness
+      des: Sharpness
+    - t: 4
+      name: _MainTex
+      des: Font Atlas
+  - name: Hidden/UI/CompositeOverdraw
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/UI/Overdraw
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+  - name: Hidden/VideoComposite
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: _MainTex (A)
+  - name: Hidden/VideoDecode
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: _MainTex (A)
+    - t: 4
+      name: _SecondTex
+      des: _SecondTex (A)
+    - t: 4
+      name: _ThirdTex
+      des: _ThirdTex (A)
+  - name: Hidden/VideoDecodeAndroid
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/VideoDecodeML
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/VideoDecodeOSX
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: Hidden/VR/BlitFromTex2DToTexArraySlice
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/VR/BlitTexArraySlice
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/VR/BlitTexArraySliceToDepth
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/VR/BlitTexArraySliceToDepth_MSAA
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Hidden/VR/Internal-VRDistortion
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Texture
+  - name: Legacy Shaders/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Decal
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _DecalTex
+      des: Decal (RGBA)
+  - name: Legacy Shaders/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Legacy Shaders/Diffuse Detail
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _Detail
+      des: Detail (RGB)
+  - name: Legacy Shaders/Diffuse Fast
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Legacy Shaders/Lightmapped/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _LightMap
+      des: Lightmap (RGB)
+  - name: Legacy Shaders/Lightmapped/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _LightMap
+      des: Lightmap (RGB)
+  - name: Legacy Shaders/Lightmapped/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _LightMap
+      des: Lightmap (RGB)
+  - name: Legacy Shaders/Lightmapped/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _LightMap
+      des: Lightmap (RGB)
+  - name: Legacy Shaders/Lightmapped/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Spec Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _LightMap
+      des: Lightmap (RGB)
+  - name: Legacy Shaders/Parallax Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Parallax Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Particles/~Additive-Multiply
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TintColor
+      des: Tint Color
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Additive
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TintColor
+      des: Tint Color
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Additive (Soft)
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Alpha Blended
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TintColor
+      des: Tint Color
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Alpha Blended Premultiply
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Anim Alpha Blended
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _TintColor
+      des: Tint Color
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Multiply
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/Multiply (Double)
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _InvFade
+      des: Soft Particles Factor
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Particles/VertexLit Blended
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _EmisColor
+      des: Emissive Color
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Legacy Shaders/Reflective/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) RefStrength (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Reflective/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) RefStrGloss (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Reflective/Bumped Unlit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB), RefStrength (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Reflective/Bumped VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Spec Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) RefStrength (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Reflective/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) RefStrength (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+  - name: Legacy Shaders/Reflective/Parallax Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) RefStrength (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Reflective/Parallax Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Reflective/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+  - name: Legacy Shaders/Reflective/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _ReflectColor
+      des: Reflection Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) RefStrength (A)
+    - t: 4
+      name: _Cube
+      des: Reflection Cubemap
+  - name: Legacy Shaders/Self-Illumin/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Self-Illumin/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Self-Illumin/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+  - name: Legacy Shaders/Self-Illumin/Parallax Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Self-Illumin/Parallax Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Self-Illumin/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+  - name: Legacy Shaders/Self-Illumin/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Spec Color
+    - t: 2
+      name: _Emission
+      des: Emission (Lightmapper)
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _Illum
+      des: Illumin (A)
+  - name: Legacy Shaders/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+  - name: Legacy Shaders/Transparent/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Transparent/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) TransGloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Transparent/Cutout/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Transparent/Cutout/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) TransGloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Legacy Shaders/Transparent/Cutout/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+  - name: Legacy Shaders/Transparent/Cutout/Soft Edge Unlit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Cutoff
+      des: Base Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Legacy Shaders/Transparent/Cutout/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) TransGloss (A)
+  - name: Legacy Shaders/Transparent/Cutout/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Spec Color
+    - t: 0
+      name: _Emission
+      des: Emissive Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+  - name: Legacy Shaders/Transparent/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+  - name: Legacy Shaders/Transparent/Parallax Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Transparent/Parallax Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Parallax
+      des: Height
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) TransGloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ParallaxMap
+      des: Heightmap (A)
+  - name: Legacy Shaders/Transparent/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) TransGloss (A)
+  - name: Legacy Shaders/Transparent/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Spec Color
+    - t: 0
+      name: _Emission
+      des: Emissive Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+  - name: Legacy Shaders/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Spec Color
+    - t: 0
+      name: _Emission
+      des: Emissive Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Mobile/Bumped Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Mobile/Bumped Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Mobile/Bumped Specular (1 Directional Realtime Light)
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Gloss (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Mobile/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Mobile/Particles/Additive
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Mobile/Particles/Alpha Blended
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Mobile/Particles/Multiply
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Mobile/Particles/VertexLit Blended
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _EmisColor
+      des: Emissive Color
+    - t: 4
+      name: _MainTex
+      des: Particle Texture
+  - name: Mobile/Skybox
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _FrontTex
+      des: Front (+Z)
+    - t: 4
+      name: _BackTex
+      des: Back (-Z)
+    - t: 4
+      name: _LeftTex
+      des: Left (+X)
+    - t: 4
+      name: _RightTex
+      des: Right (-X)
+    - t: 4
+      name: _UpTex
+      des: Up (+Y)
+    - t: 4
+      name: _DownTex
+      des: Down (-Y)
+  - name: Mobile/Unlit (Supports Lightmap)
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Mobile/VertexLit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Mobile/VertexLit (Only Directional Lights)
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Nature/SpeedTree
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _HueVariation
+      des: Hue Variation
+    - t: 2
+      name: _Cull
+      des: Cull
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _WindQuality
+      des: Wind Quality
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+    - t: 4
+      name: _DetailTex
+      des: Detail
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+  - name: Nature/SpeedTree Billboard
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _HueVariation
+      des: Hue Variation
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _WindQuality
+      des: Wind Quality
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+  - name: Nature/SpeedTree8
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _HueVariationColor
+      des: Hue Variation Color
+    - t: 0
+      name: _SubsurfaceColor
+      des: Subsurface Color
+    - t: 2
+      name: _HueVariationKwToggle
+      des: Hue Variation
+    - t: 2
+      name: _NormalMapKwToggle
+      des: Normal Mapping
+    - t: 2
+      name: _SubsurfaceKwToggle
+      des: Subsurface
+    - t: 2
+      name: _BillboardKwToggle
+      des: Billboard
+    - t: 2
+      name: _TwoSided
+      des: Two Sided
+    - t: 3
+      name: _Glossiness
+      des: Smoothness
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _SubsurfaceIndirect
+      des: Subsurface Indirect
+    - t: 3
+      name: _BillboardShadowFade
+      des: Billboard Shadow Fade
+    - t: 3
+      name: _WindQuality
+      des: Wind Quality
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Transparency (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _ExtraTex
+      des: Smoothness (R), Metallic (G), AO (B)
+    - t: 4
+      name: _SubsurfaceTex
+      des: Subsurface (RGB)
+  - name: Nature/Terrain/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: BaseMap (RGB)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Nature/Terrain/Specular
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: BaseMap (RGB)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Nature/Terrain/Standard
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 4
+      name: _MainTex
+      des: BaseMap (RGB)
+    - t: 4
+      name: _TerrainHolesTexture
+      des: Holes Map (RGB)
+  - name: Nature/Tree Creator Bark
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _SpecColor
+      des: Specular Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _GlossMap
+      des: Gloss (A)
+  - name: Nature/Tree Creator Leaves
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+    - t: 4
+      name: _BumpMap
+      des: Normalmap
+    - t: 4
+      name: _GlossMap
+      des: Gloss (A)
+    - t: 4
+      name: _TranslucencyMap
+      des: Translucency (A)
+    - t: 4
+      name: _ShadowOffset
+      des: Shadow Offset (A)
+  - name: Nature/Tree Creator Leaves Fast
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _TranslucencyColor
+      des: Translucency Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _TranslucencyViewDependency
+      des: View dependency
+    - t: 3
+      name: _ShadowStrength
+      des: Shadow Strength
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Alpha (A)
+  - name: Nature/Tree Soft Occlusion Bark
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _BaseLight
+      des: Base Light
+    - t: 3
+      name: _AO
+      des: Amb. Occlusion
+    - t: 4
+      name: _MainTex
+      des: Main Texture
+  - name: Nature/Tree Soft Occlusion Leaves
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 1
+      name: _TreeInstanceColor
+      des: TreeInstanceColor
+    - t: 1
+      name: _TreeInstanceScale
+      des: TreeInstanceScale
+    - t: 2
+      name: _SquashAmount
+      des: Squash
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 3
+      name: _BaseLight
+      des: Base Light
+    - t: 3
+      name: _AO
+      des: Amb. Occlusion
+    - t: 3
+      name: _Occlusion
+      des: Dir Occlusion
+    - t: 4
+      name: _MainTex
+      des: Main Texture
+  - name: Particles/Standard Surface
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 1
+      name: _SoftParticleFadeParams
+      des: __softparticlefadeparams
+    - t: 1
+      name: _CameraFadeParams
+      des: __camerafadeparams
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _DistortionStrength
+      des: Strength
+    - t: 2
+      name: _SoftParticlesNearFadeDistance
+      des: Soft Particles Near Fade
+    - t: 2
+      name: _SoftParticlesFarFadeDistance
+      des: Soft Particles Far Fade
+    - t: 2
+      name: _CameraNearFadeDistance
+      des: Camera Near Fade
+    - t: 2
+      name: _CameraFarFadeDistance
+      des: Camera Far Fade
+    - t: 2
+      name: _Mode
+      des: __mode
+    - t: 2
+      name: _FlipbookMode
+      des: __flipbookmode
+    - t: 2
+      name: _LightingEnabled
+      des: __lightingenabled
+    - t: 2
+      name: _DistortionEnabled
+      des: __distortionenabled
+    - t: 2
+      name: _EmissionEnabled
+      des: __emissionenabled
+    - t: 2
+      name: _BlendOp
+      des: __blendop
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _SoftParticlesEnabled
+      des: __softparticlesenabled
+    - t: 2
+      name: _CameraFadingEnabled
+      des: __camerafadingenabled
+    - t: 2
+      name: _DistortionStrengthScaled
+      des: __distortionstrengthscaled
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _Glossiness
+      des: Smoothness
+    - t: 3
+      name: _DistortionBlend
+      des: Blend
+    - t: 4
+      name: _MainTex
+      des: Albedo
+    - t: 4
+      name: _MetallicGlossMap
+      des: Metallic
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+  - name: Particles/Standard Unlit
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 1
+      name: _SoftParticleFadeParams
+      des: __softparticlefadeparams
+    - t: 1
+      name: _CameraFadeParams
+      des: __camerafadeparams
+    - t: 1
+      name: _ColorAddSubDiff
+      des: __coloraddsubdiff
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _DistortionStrength
+      des: Strength
+    - t: 2
+      name: _SoftParticlesNearFadeDistance
+      des: Soft Particles Near Fade
+    - t: 2
+      name: _SoftParticlesFarFadeDistance
+      des: Soft Particles Far Fade
+    - t: 2
+      name: _CameraNearFadeDistance
+      des: Camera Near Fade
+    - t: 2
+      name: _CameraFarFadeDistance
+      des: Camera Far Fade
+    - t: 2
+      name: _Mode
+      des: __mode
+    - t: 2
+      name: _ColorMode
+      des: __colormode
+    - t: 2
+      name: _FlipbookMode
+      des: __flipbookmode
+    - t: 2
+      name: _LightingEnabled
+      des: __lightingenabled
+    - t: 2
+      name: _DistortionEnabled
+      des: __distortionenabled
+    - t: 2
+      name: _EmissionEnabled
+      des: __emissionenabled
+    - t: 2
+      name: _BlendOp
+      des: __blendop
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 2
+      name: _Cull
+      des: __cull
+    - t: 2
+      name: _SoftParticlesEnabled
+      des: __softparticlesenabled
+    - t: 2
+      name: _CameraFadingEnabled
+      des: __camerafadingenabled
+    - t: 2
+      name: _DistortionStrengthScaled
+      des: __distortionstrengthscaled
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _DistortionBlend
+      des: Blend
+    - t: 4
+      name: _MainTex
+      des: Albedo
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+  - name: Skybox/6 Sided
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Tint
+      des: Tint Color
+    - t: 3
+      name: _Exposure
+      des: Exposure
+    - t: 3
+      name: _Rotation
+      des: Rotation
+    - t: 4
+      name: _FrontTex
+      des: Front [+Z]   (HDR)
+    - t: 4
+      name: _BackTex
+      des: Back [-Z]   (HDR)
+    - t: 4
+      name: _LeftTex
+      des: Left [+X]   (HDR)
+    - t: 4
+      name: _RightTex
+      des: Right [-X]   (HDR)
+    - t: 4
+      name: _UpTex
+      des: Up [+Y]   (HDR)
+    - t: 4
+      name: _DownTex
+      des: Down [-Y]   (HDR)
+  - name: Skybox/Cubemap
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Tint
+      des: Tint Color
+    - t: 3
+      name: _Exposure
+      des: Exposure
+    - t: 3
+      name: _Rotation
+      des: Rotation
+    - t: 4
+      name: _Tex
+      des: Cubemap   (HDR)
+  - name: Skybox/Panoramic
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Tint
+      des: Tint Color
+    - t: 2
+      name: _Mapping
+      des: Mapping
+    - t: 2
+      name: _ImageType
+      des: Image Type
+    - t: 2
+      name: _MirrorOnBack
+      des: Mirror on Back
+    - t: 2
+      name: _Layout
+      des: 3D Layout
+    - t: 3
+      name: _Exposure
+      des: Exposure
+    - t: 3
+      name: _Rotation
+      des: Rotation
+    - t: 4
+      name: _MainTex
+      des: Spherical  (HDR)
+  - name: Skybox/Procedural
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _SkyTint
+      des: Sky Tint
+    - t: 0
+      name: _GroundColor
+      des: Ground
+    - t: 2
+      name: _SunDisk
+      des: Sun
+    - t: 3
+      name: _SunSize
+      des: Sun Size
+    - t: 3
+      name: _SunSizeConvergence
+      des: Sun Size Convergence
+    - t: 3
+      name: _AtmosphereThickness
+      des: Atmosphere Thickness
+    - t: 3
+      name: _Exposure
+      des: Exposure
+  - name: Sprites/Default
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 0
+      name: _RendererColor
+      des: RendererColor
+    - t: 1
+      name: _Flip
+      des: Flip
+    - t: 2
+      name: PixelSnap
+      des: Pixel snap
+    - t: 2
+      name: _EnableExternalAlpha
+      des: Enable External Alpha
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+    - t: 4
+      name: _AlphaTex
+      des: External Alpha
+  - name: Sprites/Diffuse
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 0
+      name: _RendererColor
+      des: RendererColor
+    - t: 1
+      name: _Flip
+      des: Flip
+    - t: 2
+      name: PixelSnap
+      des: Pixel snap
+    - t: 2
+      name: _EnableExternalAlpha
+      des: Enable External Alpha
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+    - t: 4
+      name: _AlphaTex
+      des: External Alpha
+  - name: Sprites/Mask
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _EnableExternalAlpha
+      des: Enable External Alpha
+    - t: 2
+      name: PixelSnap
+      des: Pixel snap
+    - t: 3
+      name: _Cutoff
+      des: Mask alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+    - t: 4
+      name: _AlphaTex
+      des: External Alpha
+  - name: Standard
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 2
+      name: _SmoothnessTextureChannel
+      des: Smoothness texture channel
+    - t: 2
+      name: _SpecularHighlights
+      des: Specular Highlights
+    - t: 2
+      name: _GlossyReflections
+      des: Glossy Reflections
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _DetailNormalMapScale
+      des: Scale
+    - t: 2
+      name: _UVSec
+      des: UV Set for secondary textures
+    - t: 2
+      name: _Mode
+      des: __mode
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Glossiness
+      des: Smoothness
+    - t: 3
+      name: _GlossMapScale
+      des: Smoothness Scale
+    - t: 3
+      name: _Metallic
+      des: Metallic
+    - t: 3
+      name: _Parallax
+      des: Height Scale
+    - t: 3
+      name: _OcclusionStrength
+      des: Strength
+    - t: 4
+      name: _MainTex
+      des: Albedo
+    - t: 4
+      name: _MetallicGlossMap
+      des: Metallic
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _ParallaxMap
+      des: Height Map
+    - t: 4
+      name: _OcclusionMap
+      des: Occlusion
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+    - t: 4
+      name: _DetailMask
+      des: Detail Mask
+    - t: 4
+      name: _DetailAlbedoMap
+      des: Detail Albedo x2
+    - t: 4
+      name: _DetailNormalMap
+      des: Normal Map
+  - name: Standard (Specular setup)
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Color
+    - t: 0
+      name: _SpecColor
+      des: Specular
+    - t: 0
+      name: _EmissionColor
+      des: Color
+    - t: 2
+      name: _SmoothnessTextureChannel
+      des: Smoothness texture channel
+    - t: 2
+      name: _SpecularHighlights
+      des: Specular Highlights
+    - t: 2
+      name: _GlossyReflections
+      des: Glossy Reflections
+    - t: 2
+      name: _BumpScale
+      des: Scale
+    - t: 2
+      name: _DetailNormalMapScale
+      des: Scale
+    - t: 2
+      name: _UVSec
+      des: UV Set for secondary textures
+    - t: 2
+      name: _Mode
+      des: __mode
+    - t: 2
+      name: _SrcBlend
+      des: __src
+    - t: 2
+      name: _DstBlend
+      des: __dst
+    - t: 2
+      name: _ZWrite
+      des: __zw
+    - t: 3
+      name: _Cutoff
+      des: Alpha Cutoff
+    - t: 3
+      name: _Glossiness
+      des: Smoothness
+    - t: 3
+      name: _GlossMapScale
+      des: Smoothness Factor
+    - t: 3
+      name: _Parallax
+      des: Height Scale
+    - t: 3
+      name: _OcclusionStrength
+      des: Strength
+    - t: 4
+      name: _MainTex
+      des: Albedo
+    - t: 4
+      name: _SpecGlossMap
+      des: Specular
+    - t: 4
+      name: _BumpMap
+      des: Normal Map
+    - t: 4
+      name: _ParallaxMap
+      des: Height Map
+    - t: 4
+      name: _OcclusionMap
+      des: Occlusion
+    - t: 4
+      name: _EmissionMap
+      des: Emission
+    - t: 4
+      name: _DetailMask
+      des: Detail Mask
+    - t: 4
+      name: _DetailAlbedoMap
+      des: Detail Albedo x2
+    - t: 4
+      name: _DetailNormalMap
+      des: Normal Map
+  - name: UI/Default
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+  - name: UI/Default Font
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Font Texture
+  - name: UI/DefaultETC1
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+    - t: 4
+      name: _AlphaTex
+      des: Sprite Alpha Texture
+  - name: UI/Lit/Bumped
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _Specular
+      des: Specular Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Diffuse (RGB), Alpha (A)
+    - t: 4
+      name: _MainBump
+      des: Diffuse Bump Map
+  - name: UI/Lit/Detail
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _Specular
+      des: Specular Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 3
+      name: _Strength
+      des: Detail Strength
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 4
+      name: _MainTex
+      des: Diffuse (RGB), Alpha (A)
+    - t: 4
+      name: _MainBump
+      des: Diffuse Bump Map
+    - t: 4
+      name: _DetailTex
+      des: Detail (RGB)
+    - t: 4
+      name: _DetailBump
+      des: Detail Bump Map
+  - name: UI/Lit/Refraction
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _Specular
+      des: Specular Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Focus
+      des: Focus
+    - t: 4
+      name: _MainTex
+      des: Diffuse (RGB), Alpha (A)
+    - t: 4
+      name: _MainBump
+      des: Diffuse Bump Map
+    - t: 4
+      name: _Mask
+      des: Mask (Specularity, Shininess, Refraction)
+  - name: UI/Lit/Refraction Detail
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 0
+      name: _Specular
+      des: Specular Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 3
+      name: _Shininess
+      des: Shininess
+    - t: 3
+      name: _Focus
+      des: Focus
+    - t: 4
+      name: _MainTex
+      des: Diffuse (RGB), Alpha (A)
+    - t: 4
+      name: _MainBump
+      des: Diffuse Bump Map
+    - t: 4
+      name: _Mask
+      des: Mask (Specularity, Shininess, Refraction)
+    - t: 4
+      name: _DetailTex
+      des: Detail (RGB)
+    - t: 4
+      name: _DetailBump
+      des: Detail Bump Map
+    - t: 4
+      name: _DetailMask
+      des: Detail Mask (Spec, Shin, Ref)
+  - name: UI/Lit/Transparent
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 0
+      name: _Specular
+      des: Specular Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+  - name: UI/Unlit/Detail
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 3
+      name: _Strength
+      des: Detail Strength
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+    - t: 4
+      name: _DetailTex
+      des: Detail (RGB)
+  - name: UI/Unlit/Text
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Font Texture
+  - name: UI/Unlit/Text Detail
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 3
+      name: _Strength
+      des: Detail Strength
+    - t: 4
+      name: _MainTex
+      des: Sprite Texture
+    - t: 4
+      name: _DetailTex
+      des: Detail (RGB)
+  - name: UI/Unlit/Transparent
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Tint
+    - t: 2
+      name: _StencilComp
+      des: Stencil Comparison
+    - t: 2
+      name: _Stencil
+      des: Stencil ID
+    - t: 2
+      name: _StencilOp
+      des: Stencil Operation
+    - t: 2
+      name: _StencilWriteMask
+      des: Stencil Write Mask
+    - t: 2
+      name: _StencilReadMask
+      des: Stencil Read Mask
+    - t: 2
+      name: _ColorMask
+      des: Color Mask
+    - t: 2
+      name: _UseUIAlphaClip
+      des: Use Alpha Clip
+    - t: 4
+      name: _MainTex
+      des: Base (RGB), Alpha (A)
+  - name: Unlit/Color
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 0
+      name: _Color
+      des: Main Color
+  - name: Unlit/Texture
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB)
+  - name: Unlit/Transparent
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+  - name: Unlit/Transparent Cutout
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _Cutoff
+      des: Alpha cutoff
+    - t: 4
+      name: _MainTex
+      des: Base (RGB) Trans (A)
+  - name: VR/SpatialMapping/Occlusion
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos: []
+  - name: VR/SpatialMapping/Wireframe
+    supported: 1
+    hasError: 0
+    path: 
+    propertyInfos:
+    - t: 3
+      name: _WireThickness
+      des: Wire Thickness
+--- !u!4 &166797861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166797859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20878252, y: -0.20757084, z: -0.3381406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &416144476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416144479}
+  - component: {fileID: 416144478}
+  - component: {fileID: 416144477}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &416144477
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416144476}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4a91467437388d148b09d5754c789f61, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &416144478
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416144476}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &416144479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416144476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &418828785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418828787}
+  - component: {fileID: 418828786}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &418828786
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418828785}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &418828787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418828785}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &460699005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460699008}
+  - component: {fileID: 460699007}
+  - component: {fileID: 460699006}
+  m_Layer: 0
+  m_Name: CameraMain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &460699006
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460699005}
+  m_Enabled: 1
+--- !u!20 &460699007
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460699005}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &460699008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460699005}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 1.94, z: -4.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
