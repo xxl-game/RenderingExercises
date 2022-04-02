@@ -54,7 +54,10 @@ public partial class CameraRenderer
     
     void Setup()
     {
+        // 设置相机属性
         context.SetupCameraProperties(camera);
+        
+        // 清理渲染目标。
         var flags = camera.clearFlags;
         var clearDepth = flags <= CameraClearFlags.Depth;
         var clearColor = flags == CameraClearFlags.Color;
@@ -64,6 +67,9 @@ public partial class CameraRenderer
         ExecuteBuffer();
     }
     
+    /// <summary>
+    /// 提交命令给GPU
+    /// </summary>
     void Submit()
     {
         buffer.EndSample(SampleName);
@@ -71,12 +77,19 @@ public partial class CameraRenderer
         context.Submit();
     }
 
+    /// <summary>
+    /// 执行并清理命令缓存
+    /// </summary>
     void ExecuteBuffer()
     {
         context.ExecuteCommandBuffer(buffer);
         buffer.Clear();
     }
 
+    /// <summary>
+    /// 裁切
+    /// </summary>
+    /// <returns></returns>
     bool Cull()
     {
         if (camera.TryGetCullingParameters(out ScriptableCullingParameters p))
