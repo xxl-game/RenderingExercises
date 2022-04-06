@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
 
-public partial class CameraRenderer
+public partial class CatlikeCameraRenderer
 {
     private static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");    
     
@@ -15,7 +15,7 @@ public partial class CameraRenderer
 
     private CullingResults cullingResults;
     
-    public void Render(ScriptableRenderContext context, Camera camera)
+    public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing)
     {
         this.context = context;
         this.camera = camera;
@@ -28,17 +28,19 @@ public partial class CameraRenderer
         }
         
         Setup();
-        DrawVisibleGeometry();
+        DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
         DrawGizmos();
         Submit();
     }
     
-    void DrawVisibleGeometry()
+    void DrawVisibleGeometry(bool useDynamicBatching, bool useGPUInstancing)
     {
         // 从前到后绘制不透明物体
         var sortingSettings = new SortingSettings(camera) {criteria = SortingCriteria.CommonOpaque};
         var drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
+        drawingSettings.enableDynamicBatching = useDynamicBatching;
+        drawingSettings.enableInstancing = useGPUInstancing;
         var filterSettings = new FilteringSettings(RenderQueueRange.opaque);
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filterSettings);
         

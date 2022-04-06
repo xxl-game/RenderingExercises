@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class RandomObjectCreator : MonoBehaviour
+public class RandomObjectCreator : BaseMonoBehaviour
 {
     public GameObject item;
 
@@ -16,6 +16,8 @@ public class RandomObjectCreator : MonoBehaviour
 
     public float zSize = 5;
 
+    public float size = 1;
+    
     public List<Material> mats;
     
     [Button]
@@ -32,6 +34,7 @@ public class RandomObjectCreator : MonoBehaviour
             var y = Random.Range(-ySize, ySize);
             var z = Random.Range(-zSize, zSize);
             itemNew.transform.position = new Vector3(x, y, z);
+            itemNew.transform.localScale = Vector3.one * size;
             itemNew.GetComponent<MeshRenderer>().material = mats[Random.Range(0, mats.Count)];
             itemList.Add(itemNew);
         }
@@ -42,7 +45,7 @@ public class RandomObjectCreator : MonoBehaviour
     {
         if (null == itemList)
         {
-            return;
+            itemList = new List<GameObject>();
         }
     
         itemList.Clear();

@@ -18,7 +18,27 @@ MonoBehaviour:
   backgroundColor: {r: 0.09656459, g: 0.37424353, b: 0.5849056, a: 1}
   depth: 1
   isDrawSkybox: 1
-  shaderTagIds:
-  - ForwardBase
-  - CustomLightMode
   isDrawPostImageGizmo: 1
+  shaderTagIds:
+  - lightModeName: Custom
+    isEnable: 1
+  - lightModeName: VertexLMRGBM
+    isEnable: 0
+  - lightModeName: VertexLM
+    isEnable: 0
+  - lightModeName: Always
+    isEnable: 0
+  - lightModeName: ForwardBase
+    isEnable: 0
+  - lightModeName: PrepassBase
+    isEnable: 0
+  - lightModeName: Vertex
+    isEnable: 0
+  renderQueueRangeRecords:
+  - from: 0
+    to: 2500
+    sortingCriteria: 59
+  - from: 2501
+    to: 5000
+    sortingCriteria: 23
+  enableSrpBatching: 1

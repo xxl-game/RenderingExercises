@@ -1,12 +1,45 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using System.Linq;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Rendering;
+
+[Serializable]
+public class RenderQueueRangeRecord
+{
+    [Min(0f)]
+    [HideLabel]
+    [HorizontalGroup]
+    public int from;
+        
+    [MaxValue(5000)]
+    [HideLabel]
+    [HorizontalGroup]
+    public int to;
+
+    [HideLabel]
+    public SortingCriteria sortingCriteria;
+    
+}
+
+[Serializable]
+public class ShaderRecord
+{
+    [HideLabel]
+    [HorizontalGroup]
+    public string lightModeName;
+
+    [HideLabel]
+    [PropertyOrder(-1)]
+    [HorizontalGroup(20)]
+    public bool isEnable = false;
+}
 
 /// <summary>
 /// 自定义的渲染管线资产。
 /// </summary>
 [CreateAssetMenu(menuName = "Rendering/MyRenderPipelineAsset")]
-public class MyRenderPipelineAsset : RenderPipelineAsset
+public class SimpleRenderPipelineAsset : RenderPipelineAsset
 {
     [ToggleGroup("isClearRenderTarget", ToggleGroupTitle = "清理渲染目标")]
     public bool isClearRenderTarget = true;
@@ -28,11 +61,20 @@ public class MyRenderPipelineAsset : RenderPipelineAsset
     [LabelText("是否绘制天空盒")]
     public bool isDrawSkybox = false;
 
+    public bool isDrawPostImageGizmo;
+
     [Delayed]
     [PropertyOrder(100)]
-    public string[] shaderTagIds;
+    [ListDrawerSettings(Expanded = true, DraggableItems = false)]
+    [OnValueChanged("OnShaderTagIdsChanged", true)]
+    public ShaderRecord[] shaderTagIds;
 
-    public bool isDrawPostImageGizmo;
+    [PropertyOrder(101)]
+    [LabelText("From->To (0,2500,5000)")]
+    [ListDrawerSettings(Expanded = true)]
+    public RenderQueueRangeRecord[] renderQueueRangeRecords;
+
+    public bool enableSrpBatching = true;
     
     /// <summary>
     /// 第一次渲染之前会调用这个函数。
@@ -43,7 +85,14 @@ public class MyRenderPipelineAsset : RenderPipelineAsset
     {
         Debug.Log($"#Asset#Create");
         Application.targetFrameRate = 10;
-        return new MyRenderPipeline(this);
+        return new SimpleRenderPipeline(this);
+    }
+
+    void OnShaderTagIdsChanged()
+    {
+        Debug.Log("Changed");
+        shaderTagIds = shaderTagIds
+            .OrderBy(s => !s.isEnable).ToArray();
     }
 
     private void Reset()

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public partial class CameraRenderer
+public partial class CatlikeCameraRenderer
 {
     partial void DrawUnsupportedShaders();
 

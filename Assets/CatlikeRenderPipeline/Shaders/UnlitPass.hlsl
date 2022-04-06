@@ -24,18 +24,16 @@ struct Varyings
     UNITY_VERTEX_INPUT_INSTANCE_ID
 };
 
-Varyings UnlitPassVertex(Attributes input) : SV_POSITION
-{
-    Varyings output;
-    UNITY_SETUP_INSTANCE_ID(input);
-    UNITY_TRANSFER_INSTANCE_ID(input, output);
-    float3 positionWS = TransformObjectToWorld(input.positionOS);
-    output.positionCS = TransformWorldToHClip(positionWS);
-    return output;
+Varyings UnlitPassVertex (Attributes input) {
+	Varyings output;
+	UNITY_SETUP_INSTANCE_ID(input);
+	UNITY_TRANSFER_INSTANCE_ID(input, output);
+	float3 positionWS = TransformObjectToWorld(input.positionOS);
+	output.positionCS = TransformWorldToHClip(positionWS);
+	return output;
 }
 
-float4 UnlitPassFragment() : SV_TARGET
-{
+float4 UnlitPassFragment (Varyings input) : SV_TARGET {
     UNITY_SETUP_INSTANCE_ID(input);
     return UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);
 }

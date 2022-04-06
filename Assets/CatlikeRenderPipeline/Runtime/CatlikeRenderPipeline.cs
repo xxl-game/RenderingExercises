@@ -3,18 +3,24 @@ using UnityEngine.Rendering;
 
 public class CatlikeRenderPipeline : RenderPipeline
 {
-    private CameraRenderer renderer = new CameraRenderer();
+    private CatlikeCameraRenderer renderer = new CatlikeCameraRenderer();
 
-    public CatlikeRenderPipeline()
+    private bool useDynamicBatching;
+
+    private bool useGPUInstancing;
+    
+    public CatlikeRenderPipeline(bool useDynamicBatching, bool useGPUInstancing, bool useSrpBatcher)
     {
-        GraphicsSettings.useScriptableRenderPipelineBatching = true;
+        this.useDynamicBatching = useDynamicBatching;
+        this.useGPUInstancing = useGPUInstancing;
+        GraphicsSettings.useScriptableRenderPipelineBatching = useSrpBatcher;
     }
 
     protected override void Render(ScriptableRenderContext context, Camera[] cameras)
     {
         foreach (var camera in cameras)
         {
-            renderer.Render(context, camera);
+            renderer.Render(context, camera, useDynamicBatching, useGPUInstancing);
         }
     }
 }
