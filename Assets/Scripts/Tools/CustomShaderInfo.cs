@@ -48,15 +48,7 @@ public class CustomShaderInfo
             return propertyInfos?.Length ?? 0;
         }
     }
-
-    [Button]
-    [EnableIf("IsHasPath")]
-    [HorizontalGroup("line", Width = 50)]
-    public void Select()
-    {
-        EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<Shader>(path));
-    }
-
+    
     [HideLabel]
     [ShowInInspector]
     [PropertyOrder(-1)]
@@ -94,7 +86,17 @@ public class CustomShaderInfo
         return Color.white;
     }
 
-    public CustomShaderInfo(ShaderInfo shaderInfo, string path)
+#if UNITY_EDITOR
+    
+    [Button]
+    [EnableIf("IsHasPath")]
+    [HorizontalGroup("line", Width = 50)]
+    public void Select()
+    {
+        EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<Shader>(path));
+    }
+
+    public CustomShaderInfo(UnityEditor.ShaderInfo shaderInfo, string path)
     {
         name = shaderInfo.name;
         supported = shaderInfo.supported;
@@ -117,14 +119,18 @@ public class CustomShaderInfo
             propertyInfos = propertyInfos.OrderBy(p => p.t).ToArray();
         }
     }
+#endif
 
     [Serializable]
     public class ShaderPropertyInfo
     {
+#if UNITY_EDITOR
+        
         [HorizontalGroup(50f)]
         [HideLabel]
         [DisplayAsString]
-        public ShaderUtil.ShaderPropertyType t;
+        public UnityEditor.ShaderUtil.ShaderPropertyType t;
+#endif
 
         [HorizontalGroup]
         [HideLabel]

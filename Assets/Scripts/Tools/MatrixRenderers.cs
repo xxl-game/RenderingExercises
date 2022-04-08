@@ -168,6 +168,8 @@ public class MatrixRenderers : MonoBehaviour
             }
         }
     }
+
+#if UNITY_EDITOR
     
     void GetFromSelection()
     {
@@ -192,6 +194,8 @@ public class MatrixRenderers : MonoBehaviour
             }
         }
     }
+
+#endif
 
     /// <summary>
     /// 删除物体的子物体。

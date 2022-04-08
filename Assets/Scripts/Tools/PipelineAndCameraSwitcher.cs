@@ -23,6 +23,9 @@ public class PipelineAndCameraSwitcher : MonoBehaviour
     [Searchable]
     public List<CustomShaderInfo> shaderInfos;
 
+#if UNITY_EDITOR
+    
+    
     void UpdateShaders()
     {
         var dict = AssetDatabase.FindAssets("t:Shader")
@@ -144,4 +147,7 @@ public class PipelineAndCameraSwitcher : MonoBehaviour
             cameras[2] = transform3D.GetComponent<Camera>();
         }
     }
+    
+#endif
+
 }
