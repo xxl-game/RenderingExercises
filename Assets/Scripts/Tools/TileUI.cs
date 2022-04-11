@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class TileUI : BaseMonoBehaviour
 {
@@ -35,6 +36,9 @@ public class TileUI : BaseMonoBehaviour
     public Color mainColor;
 
     public Color subColor;
+
+    [PropertyOrder(1000)]
+    public Sprite[] sprites;
     
     private void Awake()
     {
@@ -140,6 +144,8 @@ public class TileUI : BaseMonoBehaviour
                 {
                     img.material = new Material(img.material.shader);
                 }
+
+                img.sprite = sprites[Random.Range(0, sprites.Length)];
 
 #if UNITY_EDITOR
                 img.name = $"{i}_{i % 2} {j}_{j % 2} {mat.GetHashCode()}";
