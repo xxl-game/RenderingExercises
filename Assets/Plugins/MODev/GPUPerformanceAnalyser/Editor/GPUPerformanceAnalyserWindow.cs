@@ -178,17 +178,18 @@ namespace UnityEditor
 			
 			EditorGUILayout.BeginHorizontal(EditorStyles.helpBox);
 			GUIStyle textStyle = new GUIStyle(EditorStyles.label);
-			textStyle.normal.textColor = pickedColor;
-			EditorGUILayout.LabelField("Color value under cursor: ", textStyle);
-			EditorGUILayout.LabelField(pickedColor.ToString().Replace("RGBA", "RGB").Replace(", 1.000)", ")"));
+			textStyle.normal.textColor = Color.white;
+			EditorGUILayout.LabelField("red value under cursor: ", textStyle);
+			EditorGUILayout.LabelField(pickedColor.r.ToString());
+			// EditorGUILayout.LabelField(pickedColor.ToString().Replace("RGBA", "RGB").Replace(", 1.000)", ")"));
 			EditorGUILayout.EndHorizontal();
 
 			if(currentOverlay.overlayParams.Count > 0 && currentOverlay.overlayParams[0].name.Contains("Count to color"))
 			{
 				int colorValToCount = Mathf.RoundToInt(pickedColor.r / currentOverlay.overlayParams[0].currentValue);
 				EditorGUILayout.IntField("Value to count", colorValToCount);
-				EditorGUILayout.HelpBox("Hint:\nTo make color picker pick only overdraw values: disable grids, wireframes and everything what change colors under mouse pointer."
-										+ "\nLower color scaling makes wider range for value to count compute. Count is limited to 255.", MessageType.Info);
+				// EditorGUILayout.HelpBox("Hint:\nTo make color picker pick only overdraw values: disable grids, wireframes and everything what change colors under mouse pointer."
+				// 						+ "\nLower color scaling makes wider range for value to count compute. Count is limited to 255.", MessageType.Info);
 			}
 			EditorGUILayout.EndVertical();
 

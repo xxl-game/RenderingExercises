@@ -5,16 +5,19 @@ using UnityEngine.Rendering;
 public class CatlikeRenderPipelineAsset : RenderPipelineAsset
 {
     [SerializeField]
-    private bool useDynamicBatching = true;
+    public bool useDynamicBatching = true;
 
     [SerializeField]
-    private bool useGPUInstancing;
+    public bool useGPUInstancing;
 
     [SerializeField]
-    private bool useSrpBatcher;
+    public bool useSrpBatcher;
+
+    [SerializeField]
+    public bool isOverlay;
     
     protected override RenderPipeline CreatePipeline()
     {
-        return new CatlikeRenderPipeline(useDynamicBatching, useGPUInstancing, useSrpBatcher);
+        return new CatlikeRenderPipeline(this);
     }
 }

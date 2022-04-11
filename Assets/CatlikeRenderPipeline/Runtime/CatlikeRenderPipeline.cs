@@ -5,22 +5,19 @@ public class CatlikeRenderPipeline : RenderPipeline
 {
     private CatlikeCameraRenderer renderer = new CatlikeCameraRenderer();
 
-    private bool useDynamicBatching;
-
-    private bool useGPUInstancing;
+    private CatlikeRenderPipelineAsset asset;
     
-    public CatlikeRenderPipeline(bool useDynamicBatching, bool useGPUInstancing, bool useSrpBatcher)
+    public CatlikeRenderPipeline(CatlikeRenderPipelineAsset asset)
     {
-        this.useDynamicBatching = useDynamicBatching;
-        this.useGPUInstancing = useGPUInstancing;
-        GraphicsSettings.useScriptableRenderPipelineBatching = useSrpBatcher;
+        this.asset = asset;
+        GraphicsSettings.useScriptableRenderPipelineBatching = asset.useSrpBatcher;
     }
 
     protected override void Render(ScriptableRenderContext context, Camera[] cameras)
     {
         foreach (var camera in cameras)
         {
-            renderer.Render(context, camera, useDynamicBatching, useGPUInstancing);
+            renderer.Render(context, camera, asset);
         }
     }
 }

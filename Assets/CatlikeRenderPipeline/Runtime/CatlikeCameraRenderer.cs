@@ -14,11 +14,17 @@ public partial class CatlikeCameraRenderer
     private CommandBuffer buffer = new CommandBuffer {name = bufferName};
 
     private CullingResults cullingResults;
+
+    private bool useDynamicBatching;
+    private bool useGPUInstancing;
+
+    private CatlikeRenderPipelineAsset asset;
     
-    public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing)
+    public void Render(ScriptableRenderContext context, Camera camera, CatlikeRenderPipelineAsset asset)
     {
         this.context = context;
         this.camera = camera;
+        this.asset = asset;
 
         PrepareBuffer();
         PrepareForSceneWindow();
@@ -28,12 +34,20 @@ public partial class CatlikeCameraRenderer
         }
         
         Setup();
-        DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
-        DrawUnsupportedShaders();
+        if (null != asset && asset.isOverlay)
+        {
+            DrawOverlay();            
+        }
+        else
+        {
+            DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
+            DrawUnsupportedShaders();            
+        }
+
         DrawGizmos();
         Submit();
     }
-    
+
     void DrawVisibleGeometry(bool useDynamicBatching, bool useGPUInstancing)
     {
         // 从前到后绘制不透明物体

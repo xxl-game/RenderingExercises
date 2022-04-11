@@ -12,11 +12,15 @@ public partial class CatlikeCameraRenderer
 
     partial void PrepareBuffer();
 
+    partial void DrawOverlay();
+    
 #if UNITY_EDITOR
 
     private string SampleName { get; set; }
 
     private static Material errorMaterial;
+
+    private static Material overlayMaterial;
     
     private static ShaderTagId[] legacyShaderTagIds =
     {
@@ -27,6 +31,8 @@ public partial class CatlikeCameraRenderer
         new ShaderTagId("VertexLMRGBM"),
         new ShaderTagId("VertexLM")
     };
+
+    private static ShaderTagId overlayShaderTagId;
 
     partial void PrepareBuffer()
     {
@@ -48,6 +54,26 @@ public partial class CatlikeCameraRenderer
             context.DrawGizmos(camera, GizmoSubset.PreImageEffects);
             context.DrawGizmos(camera, GizmoSubset.PostImageEffects);
         }
+    }
+
+    partial void DrawOverlay()
+    {
+        if (null == overlayMaterial)
+        {
+            overlayMaterial = new Material(Shader.Find("Hidden/MODev/GpuPA/TransparencyOverdrawOverlay"));
+        }
+
+        var drawingSettings = new DrawingSettings(legacyShaderTagIds[0], new SortingSettings(camera))
+        {
+            overrideMaterial = overlayMaterial
+        };
+        for (var i = 1; i < legacyShaderTagIds.Length; i++)
+        {
+            drawingSettings.SetShaderPassName(i, legacyShaderTagIds[i]);
+        }
+        drawingSettings.SetShaderPassName(legacyShaderTagIds.Length, unlitShaderTagId);
+        var filteringSettings = FilteringSettings.defaultValue;
+        context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
     }
 
     partial void DrawUnsupportedShaders()
