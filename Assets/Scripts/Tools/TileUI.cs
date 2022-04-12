@@ -16,18 +16,53 @@ public class TileUI : BaseMonoBehaviour
     public Canvas layout;
 
     [BoxGroup("Opera")]
+    [MinValue(2)]
+    [HorizontalGroup("Opera/grid")]
+    [LabelWidth(50)]
     public int gridW;
 
     [BoxGroup("Opera")]
+    [MinValue(2)]
+    [HorizontalGroup("Opera/grid")]
+    [LabelWidth(50)]
     public int gridH;
 
+    [MinValue(2)]
     [BoxGroup("Opera")]
+    [HorizontalGroup("Opera/line")]
+    [LabelWidth(50)]
     public int w;
 
+    [MinValue(2)]
     [BoxGroup("Opera")]
+    [HorizontalGroup("Opera/line")]
+    [LabelWidth(50)]
     public int h;
 
+    [BoxGroup("Opera")]
+    public bool isSetSprite = true;
+
+    [BoxGroup("Opera")]
+    public bool isFillScreen = true;
+    
     public bool isDelay = false;
+    
+    [MinValue(1)]
+    [BoxGroup("Opera")]
+    [PropertyOrder(-1)]
+    [LabelWidth(50)]
+    public int layer = 1;
+
+    [Range(0.01f, 0.2f)]
+    public float minValue = 0.1f;
+    
+    [DisplayAsString]
+    [GUIColor(0f, 1f, 0f, 1f)]
+    public string overdraw;
+
+    [ShowInInspector]
+    [DisplayAsString]
+    private string pectOnPaper;
     
     [HideInInspector]
     public List<Material> materials;
@@ -37,24 +72,15 @@ public class TileUI : BaseMonoBehaviour
 
     [HorizontalGroup("引用/Color")]
     [HideLabel]
-    [PropertyOrder(-1)]
+    [PropertyOrder(100)]
     public Color mainColor;
 
     [HorizontalGroup("引用/Color")]
     [HideLabel]
-    [PropertyOrder(-1)]
+    [PropertyOrder(100)]
     public Color subColor;
-
-    [PropertyOrder(1000)]
-    public Sprite[] sprites;
-
-    [BoxGroup("Opera")]
-    public bool isSetSprite = true;
-
-    [BoxGroup("Opera")]
-    public bool isFillScreen = true;
-
-    [FoldoutGroup("引用")]
+    
+    [FoldoutGroup("引用", Order = 10000)]
     public Button addW;
 
     [FoldoutGroup("引用")]
@@ -79,6 +105,18 @@ public class TileUI : BaseMonoBehaviour
     public Button subHS;
 
     [FoldoutGroup("引用")]
+    public Button addL;
+
+    [FoldoutGroup("引用")]
+    public Button subL;
+
+    [FoldoutGroup("引用")]
+    public Button toggle;
+
+    [FoldoutGroup("引用")]
+    public Button btnExecute;
+    
+    [FoldoutGroup("引用")]
     public Text textInfoGridSize;
     
     [FoldoutGroup("引用")]
@@ -89,25 +127,21 @@ public class TileUI : BaseMonoBehaviour
 
     [FoldoutGroup("引用")]
     public Canvas operaCanvas;
-
-    private AFPSCounter afpsCounter;
-
+    
     [FoldoutGroup("引用")]
     public CatlikeRenderPipelineAsset asset;
-
-    [MinValue(1)]
-    [BoxGroup("Opera")]
-    public int layer = 1;
-
-    [Range(0.01f, 0.2f)]
-    public float minValue = 0.1f;
     
-    [DisplayAsString]
-    [GUIColor(0f, 1f, 0f, 1f)]
-    public string overdraw;
+    [PropertyOrder(1000)]
+    public Sprite[] sprites;
+    
+    private AFPSCounter afpsCounter;
     
     private void Awake()
     {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        isDelay = true;
+#endif
+        
         afpsCounter = FindObjectOfType<AFPSCounter>();
 
         materials = new List<Material>();
@@ -115,38 +149,80 @@ public class TileUI : BaseMonoBehaviour
         Application.targetFrameRate = 30;
         if (null != addW)
         {
-            addW.onClick.AddListener(AddW);
+            addW.onClick.AddListener(AddWidth);
         }
 
         if (null != subW)
         {
-            subW.onClick.AddListener(SubW);
+            subW.onClick.AddListener(SubWidth);
         }
-
+        
         if (null != addH)
         {
-            addH.onClick.AddListener(AddH);
+            addH.onClick.AddListener(AddHeight);
         }
 
         if (null != subH)
         {
-            subH.onClick.AddListener(SubH);
+            subH.onClick.AddListener(SubHeight);
+        }
+        
+        if (null != addWS)
+        {
+            addWS.onClick.AddListener(AddCol);
         }
 
+        if (null != subWS)
+        {
+            subWS.onClick.AddListener(SubCol);
+        }
+
+        if (null != addHS)
+        {
+            addHS.onClick.AddListener(AddRow);
+        }
+
+        if (null != subHS)
+        {
+            subHS.onClick.AddListener(SubRow);
+        }
+        
+        if (null != addL)
+        {
+            addL.onClick.AddListener(AddL);   
+        }
+
+        if (null != subL)
+        {
+            subL.onClick.AddListener(SubL);   
+        }
+
+        if (null != toggle)
+        {
+            toggle.onClick.AddListener(Toggle);
+        }
+
+        if (null != btnExecute)
+        {
+            btnExecute.onClick.AddListener(Generate);
+        }
+        
         // gridW = 2;
         // gridH = 2;
     }
 
     private void Start()
     {
-        Generate();
+        // Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [PropertyOrder(11)]
+    [Button("+height", ButtonSizes.Medium)]
     [HorizontalGroup]
-    void AddH()
+    void AddHeight()
     {
         gridH += 2;
+        UpdateText();
         if (isDelay)
         {
             return;
@@ -154,13 +230,15 @@ public class TileUI : BaseMonoBehaviour
         Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("-height", ButtonSizes.Medium)]
     [HorizontalGroup]
-    void SubH()
+    [PropertyOrder(11)]
+    void SubHeight()
     {
-        if (gridH >= 2)
+        if (gridH > 2)
         {
             gridH -= 2;
+            UpdateText();
         }
         if (isDelay)
         {
@@ -169,11 +247,13 @@ public class TileUI : BaseMonoBehaviour
         Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("+width", ButtonSizes.Medium)]
     [HorizontalGroup]
-    void AddW()
+    [PropertyOrder(10)]
+    void AddWidth()
     {
         gridW += 2;
+        UpdateText();
         if (isDelay)
         {
             return;
@@ -181,13 +261,15 @@ public class TileUI : BaseMonoBehaviour
         Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("-width", ButtonSizes.Medium)]
     [HorizontalGroup]
-    void SubW()
+    [PropertyOrder(10)]
+    void SubWidth()
     {
-        if (gridW >= 2)
+        if (gridW > 2)
         {
             gridW -= 2;
+            UpdateText();
             if (isDelay)
             {
                 return;
@@ -196,11 +278,16 @@ public class TileUI : BaseMonoBehaviour
         }
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("+row", ButtonSizes.Medium)]
     [HorizontalGroup("s")]
-    void AddHS()
+    [PropertyOrder(21)]
+    void AddRow()
     {
-        h += 2;
+        if (h < gridH)
+        {
+            h += 2;
+            UpdateText();
+        }
         if (isDelay)
         {
             return;
@@ -208,13 +295,15 @@ public class TileUI : BaseMonoBehaviour
         Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("-row", ButtonSizes.Medium)]
     [HorizontalGroup("s")]
-    void SubHS()
+    [PropertyOrder(21)]
+    void SubRow()
     {
-        if (h >= 2)
+        if (h > 2)
         {
             h -= 2;
+            UpdateText();
         }
         if (isDelay)
         {
@@ -223,11 +312,16 @@ public class TileUI : BaseMonoBehaviour
         Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("+col", ButtonSizes.Medium)]
     [HorizontalGroup("s")]
-    void AddWS()
+    [PropertyOrder(20)]
+    void AddCol()
     {
-        w += 2;
+        if (w < gridW)
+        {
+            w += 2;
+            UpdateText();
+        }
         if (isDelay)
         {
             return;
@@ -235,48 +329,94 @@ public class TileUI : BaseMonoBehaviour
         Generate();
     }
 
-    [Button(ButtonSizes.Medium)]
+    [Button("-col", ButtonSizes.Medium)]
     [HorizontalGroup("s")]
-    void SubWS()
+    [PropertyOrder(20)]
+    void SubCol()
     {
-        if (w >= 2)
+        if (w > 2)
         {
             w -= 2;
+            UpdateText();
             if (isDelay)
             {
                 return;
             }
             Generate();
+        }
+    }
+
+    [Button(ButtonSizes.Medium)]
+    [HorizontalGroup("L")]
+    void AddL()
+    {
+        layer++;
+        UpdateText();
+        if (isDelay)
+        {
+            return;
+        }
+        Generate();
+    }
+
+    [Button(ButtonSizes.Medium)]
+    [HorizontalGroup("L")]
+    void SubL()
+    {
+        if (layer > 0)
+        {
+            layer--;
+            UpdateText();
+            if (isDelay)
+            {
+                return;
+            }
+            Generate();
+        }
+    }
+
+    void Toggle()
+    {
+        asset.isOverlay = !asset.isOverlay;
+        Debug.Log($"overlay:{asset.isOverlay}");
+        if (null != toggle)
+        {
+            toggle.GetComponentInChildren<Text>().text = asset.isOverlay.ToString();
+        }
+    }
+
+    void UpdateText()
+    {
+        if (null != textInfoGridSize)
+        {
+            textInfoGridSize.text = $"{gridW * gridH * layer}={gridW}x{gridH}x{layer}";
+        }
+
+        if (null != textInfoRealSize)
+        {
+            textInfoRealSize.text = $"{w * h * layer}={w}x{h}x{layer}";
         }
     }
 
     [HorizontalGroup("B")]
     [Button(ButtonSizes.Medium)]
+    [PropertyOrder(50)]
     void Generate()
     {
+        UpdateText();
+        
         Clear();
         if (null == item)
         {
             return;
         }
-
+        
         var numW = isFillScreen ? gridW : w;
         var numH = isFillScreen ? gridH : h;
+        
+        pectOnPaper = $"{(float) (w * h * layer) / (gridW * gridH):P2}";
 
-        if (null != textInfoGridSize)
-        {
-            textInfoGridSize.text = $"{gridW * gridH}={gridW}x{gridH}";
-        }
-
-        if (null != textInfoRealSize)
-        {
-            textInfoRealSize.text = $"{w * h}={w}x{h}";
-        }
-
-        if (null != textTotal)
-        {
-            textTotal.text = $"{(float) (w * h) / (gridW * gridH):F2}={w * h}/{gridW * gridH}";
-        }
+        UpdatePectText();
 
         var rectTransform = layout.GetComponent<RectTransform>();
         var rect = rectTransform.rect;
@@ -315,19 +455,31 @@ public class TileUI : BaseMonoBehaviour
                 }
             }
         }
+        
+        Record();
     }
 
     [Button(ButtonSizes.Medium)]
     [HorizontalGroup("B")]
+    [PropertyOrder(50)]
     void Clear()
     {
         layout.transform.DeleteAllChildren();
     }
 
     public Texture2D tex;
-
+    
+    void UpdatePectText()
+    {
+        if (null != textTotal)
+        {
+            textTotal.text = $"{overdraw}/{pectOnPaper}";
+        }
+    }
+    
     [Button()]
     [HorizontalGroup("B")]
+    [PropertyOrder(50)]
     public void Record()
     {
         StartCoroutine(UploadPNG());
@@ -373,14 +525,9 @@ public class TileUI : BaseMonoBehaviour
         {
             afpsCounter.OperationMode = OperationMode.Normal;
         }
-
-        if (null != asset)
-        {
-            asset.isOverlay = false;
-        }
-
+        
         var pixels = tex.GetPixels();
-        // Debug.Log($"{width},{height}   {width * height}   {pixels.Length}");
+        Debug.Log($"{width},{height}={width * height}   {pixels.Length}");
 
         var allRed = pixels.Length;
         var red = 0f;
@@ -396,18 +543,14 @@ public class TileUI : BaseMonoBehaviour
                 circle = 0;
                 var f = (float)i / pixels.Length;
                 EditorUtility.DisplayProgressBar("For every pixel", $"{i}/{pixels.Length}", f);        
-#endif
             }
+#endif
             
             var pix = pixels[i];
             var r = pix.r;
             var round = Mathf.RoundToInt(r / minValue);
             var a = round;
             red += a;
-            if (Random.Range(0f, 1f) > .001f)
-            {
-                Debug.Log($"{i}: {a}");
-            }
         }
 
 #if UNITY_EDITOR
@@ -418,5 +561,16 @@ public class TileUI : BaseMonoBehaviour
         float pect = red / allRed;
         overdraw = $"{pect:P2}" ;
         Debug.Log($"pect: {red}/{allRed} = {pect}");
+        
+        UpdatePectText();
+
+        if (null != asset)
+        {
+            asset.isOverlay = false;
+        }
+        
+#if UNITY_EDITOR
+        UnityEditorInternal.InternalEditorUtility.RepaintAllViews();
+#endif
     }
 }

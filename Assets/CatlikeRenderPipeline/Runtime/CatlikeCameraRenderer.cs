@@ -5,6 +5,8 @@ public partial class CatlikeCameraRenderer
 {
     private static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");    
     
+    private static ShaderTagId litShaderTagId = new ShaderTagId("CatlikeCustomLit");    
+    
     private ScriptableRenderContext context;
 
     private Camera camera;
@@ -18,6 +20,8 @@ public partial class CatlikeCameraRenderer
     private bool useDynamicBatching;
     private bool useGPUInstancing;
 
+    private static Material overlayMaterial;
+    
     private CatlikeRenderPipelineAsset asset;
     
     public void Render(ScriptableRenderContext context, Camera camera, CatlikeRenderPipelineAsset asset)
@@ -48,6 +52,32 @@ public partial class CatlikeCameraRenderer
         Submit();
     }
 
+    void DrawOverlay()
+    {
+        if (null == overlayMaterial)
+        {
+            overlayMaterial = new Material(Shader.Find("Hidden/MODev/GpuPA/TransparencyOverdrawOverlay"));
+        }
+
+        // Debug.Log(1);
+        var drawingSettings = new DrawingSettings(legacyShaderTagIds[0], new SortingSettings(camera))
+        {
+            overrideMaterial = overlayMaterial
+        };
+        // Debug.Log(2);
+        for (var i = 1; i < legacyShaderTagIds.Length; i++)
+        {
+            drawingSettings.SetShaderPassName(i, legacyShaderTagIds[i]);
+        }
+        // Debug.Log(3);
+        drawingSettings.SetShaderPassName(legacyShaderTagIds.Length, unlitShaderTagId);
+        // Debug.Log(4);
+        var filteringSettings = FilteringSettings.defaultValue;
+        // Debug.Log(5);
+        context.DrawRenderers(cullingResults, ref drawingSettings, ref filteringSettings);
+        // Debug.Log("Draw overlay");
+    }
+    
     void DrawVisibleGeometry(bool useDynamicBatching, bool useGPUInstancing)
     {
         // 从前到后绘制不透明物体
@@ -55,6 +85,7 @@ public partial class CatlikeCameraRenderer
         var drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings);
         drawingSettings.enableDynamicBatching = useDynamicBatching;
         drawingSettings.enableInstancing = useGPUInstancing;
+        drawingSettings.SetShaderPassName(1, litShaderTagId);
         var filterSettings = new FilteringSettings(RenderQueueRange.opaque);
         context.DrawRenderers(cullingResults, ref drawingSettings, ref filterSettings);
         
