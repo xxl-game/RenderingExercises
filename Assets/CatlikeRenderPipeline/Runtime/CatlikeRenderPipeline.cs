@@ -11,6 +11,7 @@ public class CatlikeRenderPipeline : RenderPipeline
     {
         this.asset = asset;
         GraphicsSettings.useScriptableRenderPipelineBatching = asset.useSrpBatcher;
+        GraphicsSettings.lightsUseLinearIntensity = true;
     }
 
     protected override void Render(ScriptableRenderContext context, Camera[] cameras)

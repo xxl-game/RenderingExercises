@@ -23,6 +23,8 @@ public partial class CatlikeCameraRenderer
     private static Material overlayMaterial;
     
     private CatlikeRenderPipelineAsset asset;
+
+    private Lighting lighting = new Lighting();
     
     public void Render(ScriptableRenderContext context, Camera camera, CatlikeRenderPipelineAsset asset)
     {
@@ -44,6 +46,7 @@ public partial class CatlikeCameraRenderer
         }
         else
         {
+            lighting.Setup(context, cullingResults);
             DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
             DrawUnsupportedShaders();            
         }
