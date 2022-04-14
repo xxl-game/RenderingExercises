@@ -34,11 +34,15 @@ public partial class CatlikeCameraRenderer
 
         PrepareBuffer();
         PrepareForSceneWindow();
-        if (!Cull())
+        if (!Cull(asset.shadows.maxDistance))
         {
             return;
         }
         
+        buffer.BeginSample(SampleName);
+        ExecuteBuffer();
+        lighting.Setup(context, cullingResults, asset.shadows);
+        buffer.EndSample(SampleName);
         Setup();
         if (null != asset && asset.isOverlay)
         {
@@ -46,12 +50,12 @@ public partial class CatlikeCameraRenderer
         }
         else
         {
-            lighting.Setup(context, cullingResults);
             DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
             DrawUnsupportedShaders();            
         }
 
         DrawGizmos();
+        lighting.Cleanup();
         Submit();
     }
 
@@ -140,10 +144,11 @@ public partial class CatlikeCameraRenderer
     /// 裁切
     /// </summary>
     /// <returns></returns>
-    bool Cull()
+    bool Cull(float maxShadowDistance)
     {
         if (camera.TryGetCullingParameters(out ScriptableCullingParameters p))
         {
+            p.shadowDistance = Mathf.Min(maxShadowDistance, camera.farClipPlane);
             cullingResults = context.Cull(ref p);   
             return true;
         }

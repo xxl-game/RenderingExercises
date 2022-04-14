@@ -15,6 +15,9 @@ public class CatlikeRenderPipelineAsset : RenderPipelineAsset
 
     [SerializeField]
     public bool isOverlay;
+
+    [SerializeField]
+    public ShadowSettings shadows = default;
     
     protected override RenderPipeline CreatePipeline()
     {

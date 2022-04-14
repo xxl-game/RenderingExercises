@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class Lighting
 {
@@ -20,13 +21,17 @@ public class Lighting
     private CullingResults cullingResults;
 
     private const int maxDirLightCount = 4;
+
+    private Shadows shadows = new Shadows();
     
-    public void Setup(ScriptableRenderContext context, CullingResults cullingResults)
+    public void Setup(ScriptableRenderContext context, CullingResults cullingResults, ShadowSettings shadowSettings)
     {
         this.cullingResults = cullingResults;
         buffer.BeginSample(bufferName);
+        shadows.Setup(context, cullingResults, shadowSettings);
         SetupLights();
         buffer.EndSample(bufferName);
+        shadows.Render();
         context.ExecuteCommandBuffer(buffer);
         buffer.Clear();
     }
@@ -57,5 +62,12 @@ public class Lighting
     {
         dirLightColors[index] = visibleLight.finalColor;
         dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
+        
+        shadows.ReserveDirectionalShadows(visibleLight.light, index);
+    }
+
+    public void Cleanup()
+    {
+        shadows.Cleanup();
     }
 }
