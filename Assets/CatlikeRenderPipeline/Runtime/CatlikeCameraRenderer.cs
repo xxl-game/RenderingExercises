@@ -78,6 +78,7 @@ public partial class CatlikeCameraRenderer
         }
         // Debug.Log(3);
         drawingSettings.SetShaderPassName(legacyShaderTagIds.Length, unlitShaderTagId);
+        drawingSettings.SetShaderPassName(legacyShaderTagIds.Length + 1, litShaderTagId);
         // Debug.Log(4);
         var filteringSettings = FilteringSettings.defaultValue;
         // Debug.Log(5);
