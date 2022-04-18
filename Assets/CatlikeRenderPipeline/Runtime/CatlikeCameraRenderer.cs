@@ -32,16 +32,18 @@ public partial class CatlikeCameraRenderer
         this.camera = camera;
         this.asset = asset;
 
+        var shadows = asset.shadows;
+        
         PrepareBuffer();
         PrepareForSceneWindow();
-        if (!Cull(asset.shadows.maxDistance))
+        if (!Cull(shadows.maxDistance))
         {
             return;
         }
         
         buffer.BeginSample(SampleName);
         ExecuteBuffer();
-        lighting.Setup(context, cullingResults, asset.shadows);
+        lighting.Setup(context, cullingResults, shadows);
         buffer.EndSample(SampleName);
         Setup();
         if (null != asset && asset.isOverlay)
