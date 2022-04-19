@@ -39,6 +39,7 @@ public partial class CatlikeCameraRenderer
     {
         if (camera.cameraType == CameraType.SceneView)
         {
+            // 在场景中绘制UI。
             ScriptableRenderContext.EmitWorldGeometryForSceneView(camera);
         }
     }
