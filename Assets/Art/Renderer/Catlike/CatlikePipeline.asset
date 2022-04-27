@@ -15,7 +15,7 @@ MonoBehaviour:
   useDynamicBatching: 0
   useGPUInstancing: 1
   useSrpBatcher: 0
-  isOverlay: 0
+  isOverlay: 1
   shadows:
     maxDistance: 10
     directional:

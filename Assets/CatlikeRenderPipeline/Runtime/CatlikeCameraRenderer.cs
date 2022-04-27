@@ -65,7 +65,8 @@ public partial class CatlikeCameraRenderer
     {
         if (null == overlayMaterial)
         {
-            overlayMaterial = new Material(Shader.Find("Hidden/MODev/GpuPA/TransparencyOverdrawOverlay"));
+            overlayMaterial = new Material(Shader.Find("Catlike RP/WastAlpha"));
+            // overlayMaterial = new Material(Shader.Find("Hidden/MODev/GpuPA/TransparencyOverdrawOverlay"));
         }
 
         // Debug.Log(1);
